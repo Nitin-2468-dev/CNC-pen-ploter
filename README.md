@@ -49,7 +49,7 @@ The complete CAD assembly, source files, and design history are available on Ons
 
 3D printable components can be found here:
 
-* [Printed Parts](./3D%20print/Printed%20Parts.md)
+* [Printed Parts](./3D%20print/README.md)
 
 ## Electronics
 
@@ -73,7 +73,7 @@ The complete CAD assembly, source files, and design history are available on Ons
 
 * [Watch Demo Video](https://www.youtube.com/watch?v=2c1DS8Nv8dU)
 
-* [Devlopment](./Images/timeline.md)
+* [Devlopment](./Images/README.md)
 
 
 ![Belt](./Images/Belt.png)
