@@ -53,7 +53,9 @@ The complete CAD assembly, source files, and design history are available on Ons
 
 ## Electronics
 
-*Wiring diagrams* (still pending), controller configuration files, and FluidNC settings are located in the [`Firmware`](./Firmware/README.md) directory.
+*Wiring diagrams* (still pending) but i have [fluidnc-pinout](./Firmware/fluidnc-pinout.md) , controller configuration files, and FluidNC settings are located in the [`Firmware`](./Firmware/README.md) directory.
+
+
 
 
 ## Build Status
