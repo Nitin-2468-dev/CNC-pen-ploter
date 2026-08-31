@@ -1,6 +1,6 @@
 # CNC Pen Ploter
 
-this is an A3 CNC pen plotter inspired by the OpenBuilds ACRO system and designed for handwriting, drawing, and future painting experiments.
+This is an A3 CNC pen plotter inspired by the OpenBuilds ACRO system and designed for handwriting, drawing, and future painting experiments.
 
 The machine uses a V-slot motion system, FluidNC firmware, and a custom servo-powered pen-lift mechanism.
 
@@ -31,15 +31,17 @@ The machine uses a V-slot motion system, FluidNC firmware, and a custom servo-po
 
 ## Bill of Materials
 
-Detailed BOM files:
+The updated BOM is provided as an Excel spreadsheet, with a CSV copy for quick reference.
 
-* [Cost Summary](./BOM/Cost-Summary.md)
-* [BOM Spreadsheet](./BOM/BOM.xlsx)
+* [Updated BOM Spreadsheet](./BOM/CNC_Pen-ploter_updated_(sheet2).xlsx)
 * [BOM CSV](./BOM/BOM.csv)
+* [Cost Summary](./BOM/Cost-Summary.md)
 
-### Project Cost
+## Assembly Guide
 
-**Total Build Cost:** ₹21,765.83 (~$220.67 USD)
+* [CNC Pen Plotter Assembly & Wiring Guide](./GUIDE/GUIDE_updated.pdf)
+
+The guide contains the complete 41-page assembly sequence, parts lists, axis assembly, pen-lift assembly, electronics assembly, and wiring steps.
 
 ## CAD Files
 
@@ -53,10 +55,7 @@ The complete CAD assembly, source files, and design history are available on Ons
 
 ## Electronics
 
-*Wiring diagrams* (still pending) but i have [fluidnc-pinout](./Firmware/fluidnc-pinout.md) , controller configuration files, and FluidNC settings are located in the [`Firmware`](./Firmware/README.md) directory.
-
-
-
+The assembly guide includes the current electronics mounting and wiring sequence. Controller configuration files and FluidNC settings are located in the [`Firmware`](./Firmware/README.md) directory.
 
 ## Build Status
 
@@ -75,12 +74,11 @@ The complete CAD assembly, source files, and design history are available on Ons
 
 * [Watch Demo Video](https://www.youtube.com/watch?v=2c1DS8Nv8dU)
 
-* [Devlopment](./Images/README.md)
-
+* [Development](./Images/README.md)
 
 ![Belt](./Images/Belt.png)
-![Conrtoller](./Images/Cotroller.png)
-![pen lift](./Images/pen_lift.png)
+![Controller](./Images/Cotroller.png)
+![Pen lift](./Images/pen_lift.png)
 
 |                                                                                                                   |                                                                                                                   |
 | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
@@ -91,7 +89,6 @@ The complete CAD assembly, source files, and design history are available on Ons
 | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
 | ![CAD Render](https://cdn.hackclub.com/019ea32f-ddc3-7242-9179-f37e4902b7f1/Screenshot%202026-06-07%20222251.png) | ![CAD Render](https://cdn.hackclub.com/019ea32f-e042-7168-92b9-a0abb94ec0de/Screenshot%202026-06-07%20222258.png) |
 | ![CAD Render](https://cdn.hackclub.com/019ea32f-e7ab-7216-8fb9-697a29579d25/Screenshot%202026-06-07%20222307.png) | ![CAD Render](https://cdn.hackclub.com/019ea32f-efa0-7567-b995-2ffb2eb0bf86/Screenshot%202026-06-07%20222320.png) |
-
 
 ---
 
