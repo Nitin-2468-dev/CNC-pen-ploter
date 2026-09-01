@@ -1,32 +1,49 @@
-Part                           , Quantity
-MKS DLC32 V2.1                 ,        1
-NEMA17 Stepper Motor           ,        3
-GT2 Timing Belt 6mm 2m         ,        1
-GT2 20T Pulley 5mm Bore        ,        3
-SG90 Servo                     ,        1
-Limit Switch                   ,        2
-Meanwell LRS-150-24 PSU        ,        1
-ACRO Acrylic Plate Set         ,        1
-20mm Corrugated Conduit        ,        1
-Concrete Nail Pack             ,        2
-M3x6 Nylon Spacer Pack         ,        1
-M3 Ultra Low Profile Screw 10mm,       12
-M5 Ultra Low Profile Screw 8mm ,       26
-M5 Ultra Low Profile Screw 10mm,       10
-M5 Ultra Low Profile Screw 12mm,       10
-M5 Ultra Low Profile Screw 15mm,       10
-M5 Ultra Low Profile Screw 25mm,       10
-M5 Ultra Low Profile Screw 30mm,       10
-M5 Ultra Low Profile Screw 40mm,       10
-M5 Ultra Low Profile Screw 50mm,       10
-M3 T-Nut                       ,       10
-M5 T-Nut                       ,       27
-M5 Nylon Lock Nut              ,       15
-M5 Washer                      ,       16
-5.1mm Spacer                   ,       16
-20 Series Corner Bracket       ,        8
-Delrin V-Wheel Kit             ,       12
-Straight Grained Knob M4       ,        1
-2040 V-Slot Extrusion Set      ,        1
-2020 V-Slot Extrusion Set      ,        1
-3D Printed Parts               ,       10
+Category,Part,Specification,Qty,Unit Cost (INR),Total Cost (INR),Link
+Motion,NEMA 17 Stepper Motor,42 x 42 mm,3,450,1350,https://rees52.com/products/17hs4401s-nema-17-stepper-motor-for-3d-printer?_pos=4&_sid=48153941e&_ss=r
+Motion,Delrin Solid V-Wheel,.,12,2619.6,2619.6,https://www.3dprintronics.com/products/?productId=65234093
+Motion,GT2 Timing Pulley,"20T, M5",1,390,390,https://www.3dprintronics.com/products/gt-2-pulley-20t-5mm-bore
+Motion,GT2 Timing Belt,2m,2,85,170,https://makerbazar.in/products/1m-gt2-width-6mm-black-open-timing-belt-for-3d-printer
+Aluminium Frame,V-Slot Extrusion 2040,444 mm,1,731.6,731.6,https://www.3dprintronics.com/extrusions?productId=721461094
+Aluminium Frame,V-Slot Extrusion 2040,610 mm,2,2053.2,2053.2,https://www.3dprintronics.com/extrusions?productId=721461094
+Aluminium Frame,V-Slot Extrusion 2020,444 mm,2,849.6,849.6,https://www.3dprintronics.com/extrusions?productId=720294005
+Aluminium Frame,Corner Bracket 20,20 Series,8,700.9,700.9,https://www.3dprintronics.com/brackets
+M5 Hardware,Ultra Low Profile Screw,M5x 50mm,1,240,240,
+M5 Hardware,Ultra Low Profile Screw,M5 x40mm,3,240,240,
+M5 Hardware,Ultra Low Profile Screw,M5x 30mm,8,200,200,
+M5 Hardware,Ultra Low Profile Screw,M5 × 25 mm,12,216,216,
+M5 Hardware,Ultra Low Profile Screw,M5 x 15 mm,6,275,275,
+M5 Hardware,Ultra Low Profile Screw,M5 × 10 mm,3,275,275,
+M5 Hardware,Ultra Low Profile Screw,M5 × 8 mm,30,750,750,
+M5 Hardware,Nylon Lock Nut,M5,16,66.08,66.08,
+M5 Hardware,Washer / Shim,M5,28,429.52,429.52,
+M5 Hardware,Drop-In T-Nut,M5,34,612,612,https://www.3dprintronics.com/tnuts
+M3 Hardware,Screw,M3 × 16 mm,2,140,140,
+M3 Hardware,Screw,M3 x 10 mm,12,120,120,
+M3 Hardware,PCB Stand-Off,M3,2,143,143,https://rees52.com/products/m3x10mm-nylon-hex-spacers-10mm-female-female-nylon-hex-spacers-versatile-m3-nylon-hex-spacers-for-electronics-projects-pack-of-10-rs4028?_pos=4&_sid=70c24bf3d&_ss=r
+M3 Hardware,Drop-In T-Nut,M3,2,180,360,https://www.3dprintronics.com/tnuts
+M2.5 Hardware,Screw,M2.5 × 4 mm,2,141.6,141.6,
+M2 Hardware,Screw,M2 x 8 mm,6,129,129,
+Spacers,Aluminium Spacer,5.1 mm ID × 6 mm,16,283.2,283.2,https://www.3dprintronics.com/fasteners
+Printed Parts,Clip Fixture,,6,,0,
+Printed Parts,Limit Switch Mount,,2,,0,
+Printed Parts,Pen Carriage Moving,,1,,0,
+Printed Parts,Pen Carriage Monunt,,1,,0,
+Printed Parts,Buck convertor Mount,,1,,0,
+Laser cut,ACRO Plate Set,,1,1480,1480,https://www.3dprintronics.com/products/acro-acrylic-plate-set
+Pen Lift,Concrete Nail,70 mm,2,19,38,https://makerbazar.in/products/concrete-iron-nails?variant=44871802716400
+Pen Lift,Pen Spring,7.5mm,2,,0,
+Pen Lift,Screw Knob,M5,1,135.7,135.7,https://www.3dprintronics.com/fasteners
+Electronics,MKS DLC32,,1,1999,1999,https://rees52.com/products/makerbase-mks-dlc32-v2-1-offline-controller-board-for-standalone-3d-printer-cnc-board?selling_plan=2556362919&variant=47709331161255
+Electronics,DRV8825 Motor Driver,,3,99,297,https://makerbazar.in/products/drv8825-stepper-motor-driver-with-aluminum-heat-sink?variant=45989819384048
+Electronics,Meanwell Power Supply,,1,1749,1749,https://www.3dprintronics.com/products/original-meanwell-psu-lrs-150-24
+Electronics,DC-DC Converter,,1,65,65,https://makerbazar.in/products/xl6009-dc-dc-adjustable-boost-buck-step-up-step-down-converter-module?variant=49621760803056
+Electronics,Servo Motor ,,1,99,99,https://makerbazar.in/products/small-servo-plastic-gear-svg90s?variant=45449411395824
+Electronics,Limit Switch,,2,14,28,https://makerbazar.in/products/automation-direct-limit-switch?variant=46931163742448
+Connectors,JST-XH Connector Kit,"2.54 mm, 230 pcs",1,,0,https://makerbazar.in/products/230pcs-jst-xh-2-54mm-terminal-connectors-kit?variant=44076187353328
+Connectors,Wire Stripper / Crimper,27 in 1,1,,0,https://makerbazar.in/products/multifunctional-wire-stripper-tool?variant=48854082224368
+Connectors,22 AWG wire.,RED,5,,1150,https://rees52.com/products/22-awg-hookup-wire-kit-600v-pre-tinned-solid-core-copper-wire-6-assorted-colors-10-meters-each-for-electronics-and-diy-projects-solid-rs3858?variant=45173813280935&country=IN&currency=INR
+Connectors,22 AWG wire.,BLACK,3,,0,
+Connectors,22 AWG wire.,BLUE,3,,0,
+Connectors,22 AWG wire.,YELLOW,1,,0,
+Connectors,22 AWG wire.,GREEN,3,,0,
+other,20mm Conduit,,1,499,499,https://makerbazar.in/products/gi-flexible-electrical-conduit-pipe?variant=49720866930928

@@ -39,7 +39,7 @@ The updated BOM is provided as an Excel spreadsheet, with a CSV copy for quick r
 
 ## Assembly Guide
 
-* [CNC Pen Plotter Assembly & Wiring Guide](./GUIDE/GUIDE_updated.pdf)
+* [CNC Pen Plotter Assembly & Wiring Guide](./Docs/GUIDE_updated.pdf)
 
 The guide contains the complete 41-page assembly sequence, parts lists, axis assembly, pen-lift assembly, electronics assembly, and wiring steps.
 
@@ -47,7 +47,9 @@ The guide contains the complete 41-page assembly sequence, parts lists, axis ass
 
 The complete CAD assembly, source files, and design history are available on Onshape:
 
-* [View Onshape Project](https://cad.onshape.com/documents/d076f74775598c2c224d3ddc/w/a742f32d9e5f68d3a0ed4f3e/e/59cbca8dd54cfc34bc3f8ac0?renderMode=0&leftPanel=false&uiState=6a25ab40411915944ca1e2be)
+* [View Onshape Project](https://cad.onshape.com/documents/cf470daa2010d17c98d59f14/w/9217e9e7d147d62c9b62fa11/e/110cbc33f4cd917d186821d2?renderMode=0&uiState=6a961a29e612142b9e0b4a56)
+
+* [old Onshape Project](https://cad.onshape.com/documents/d076f74775598c2c224d3ddc/w/a742f32d9e5f68d3a0ed4f3e/e/59cbca8dd54cfc34bc3f8ac0?renderMode=0&leftPanel=false&uiState=6a25ab40411915944ca1e2be)
 
 3D printable components can be found here:
 
@@ -80,17 +82,8 @@ The assembly guide includes the current electronics mounting and wiring sequence
 ![Controller](./Images/Cotroller.png)
 ![Pen lift](./Images/pen_lift.png)
 
-|                                                                                                                   |                                                                                                                   |
-| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| ![CAD Render](https://cdn.hackclub.com/019ea32f-7e37-7cda-909f-a4c52907b430/Screenshot%202026-06-07%20222151.png) | ![CAD Render](https://cdn.hackclub.com/019ea32f-b57a-72ac-b950-389e9133ca6f/Screenshot%202026-06-07%20222203.png) |
-| ![CAD Render](https://cdn.hackclub.com/019ea32f-bc80-7738-a1a9-5506fdae0250/Screenshot%202026-06-07%20222212.png) | ![CAD Render](https://cdn.hackclub.com/019ea32f-cab7-7ae9-84d9-85896d867a24/Screenshot%202026-06-07%20222221.png) |
 
-|                                                                                                                   |                                                                                                                   |
-| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| ![CAD Render](https://cdn.hackclub.com/019ea32f-ddc3-7242-9179-f37e4902b7f1/Screenshot%202026-06-07%20222251.png) | ![CAD Render](https://cdn.hackclub.com/019ea32f-e042-7168-92b9-a0abb94ec0de/Screenshot%202026-06-07%20222258.png) |
-| ![CAD Render](https://cdn.hackclub.com/019ea32f-e7ab-7216-8fb9-697a29579d25/Screenshot%202026-06-07%20222307.png) | ![CAD Render](https://cdn.hackclub.com/019ea32f-efa0-7567-b995-2ffb2eb0bf86/Screenshot%202026-06-07%20222320.png) |
-
----
+[![GUIDE](./Docs/01.png)](./Docs/README.md)
 
 ## License
 
