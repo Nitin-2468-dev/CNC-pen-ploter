@@ -35,7 +35,6 @@ The updated BOM is provided as an Excel spreadsheet, with a CSV copy for quick r
 
 * [Updated BOM Spreadsheet](./BOM/CNC_Pen-ploter_updated_(sheet2).xlsx)
 * [BOM CSV](./BOM/BOM.csv)
-* [Cost Summary](./BOM/Cost-Summary.md)
 
 ## Assembly Guide
 
