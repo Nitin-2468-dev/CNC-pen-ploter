@@ -22,7 +22,7 @@ This folder contains all 3D-printed components required for the CNC Pen-Ploter b
 
   * Quantity: **1**
 
-* [pen_pen_hodler.stl](./Final%20Build%20-%20pen%20carriage%20M.step)
+* [pen_pen_hodler.stl](./Final%20Build%20-%20pen%20carriage%20M.stl)
 
   * Quantity: **1**
 
