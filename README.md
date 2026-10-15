@@ -115,7 +115,8 @@ Status based on the repository documentation:
 - [x] BOM files committed
 - [x] Assembly and wiring guide published as a release asset
 - [x] Planned hardware selected and documented
-- [ ] Parts ordered and received — confirm current status
+- [ ] Parts ordered
+- [ ] Parts received
 - [ ] Mechanical assembly completed
 - [ ] Electronics wiring inspected and tested
 - [ ] FluidNC configuration completed and validated
