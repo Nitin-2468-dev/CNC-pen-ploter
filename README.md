@@ -1,6 +1,6 @@
 # CNC Pen Plotter
 
-A custom A3-format CNC pen plotter designed in CAD and inspired by the [OpenBuilds ACRO DrawBot](https://openbuilds.com/). The design uses V-slot aluminium extrusions, GT2 belt motion, three NEMA 17 stepper motors, and a servo-driven pen-lift mechanism.
+A custom A3-format CNC pen plotter designed in CAD and inspired by the [OpenBuilds ACRO DrawBot](https://builds.openbuilds.com/builds/a1-acro-draw-bot.10605/). The design uses V-slot aluminium extrusions, GT2 belt motion, three NEMA 17 stepper motors, and a servo-driven pen-lift mechanism.
 
 > **Project status: CAD and documentation phase.** The repository's firmware notes state that the machine has not yet been assembled and that the final FluidNC configuration has not been tested. The files here document the planned build; physical motion and drawing have not been verified.
 
@@ -132,7 +132,7 @@ This design includes mains-powered equipment and a 24 V DC power supply. Mains w
 
 ## Credits and licensing
 
-This design is inspired by the [OpenBuilds ACRO DrawBot](https://openbuilds.com/). Please consult the upstream project for its original design and attribution details.
+This design is inspired by the [OpenBuilds ACRO DrawBot](https://builds.openbuilds.com/builds/a1-acro-draw-bot.10605/). Please consult the upstream project for its original design and attribution details.
 
 The repository includes [LICENSE.md](LICENSE.md), which applies the **CERN Open Hardware Licence Version 2 — Strongly Reciprocal (CERN-OHL-S v2)** to covered source. Read the complete licence before reusing or distributing the design. External components, upstream designs, and third-party software may have their own terms.
 
