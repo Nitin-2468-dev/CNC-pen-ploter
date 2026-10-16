@@ -12,7 +12,7 @@ A custom A3-format CNC pen plotter designed in CAD and inspired by the [OpenBuil
 - [Hack Club Forge project page](https://forge.hackclub.com/projects/3639)
 - [Latest release (v1.0)](https://github.com/Nitin-2468-dev/CNC-pen-ploter/releases/tag/v1.0)
 - [Assembly guide PDF (download from the release)](https://github.com/Nitin-2468-dev/CNC-pen-ploter/releases/download/v1.0/GUIDE_updated.pdf)
-- [Updated BOM spreadsheet](BOM/CNC_Pen-ploter_updated_(sheet2).xlsx)
+- [Updated BOM spreadsheet](<BOM/CNC_Pen-ploter_updated_(sheet2).xlsx>)
 - [BOM CSV](BOM/BOM.csv)
 - [Onshape CAD assembly](https://cad.onshape.com/documents/cf470daa2010d17c98d59f14/w/9217e9e7d147d62c9b62fa11/e/110cbc33f4cd917d186821d2?renderMode=0&uiState=6a961a29e612142b9e0b4a56)
 
@@ -34,25 +34,25 @@ The repository contains design files and assembly documentation. It is not yet a
 
 These are design intentions and documented component choices, not claims that the assembled machine has been tested.
 
-## Planned hardware
+## Hardware
 
-| Component | Planned specification | Notes |
-|---|---|---|
-| Controller | MKS DLC32 V2.1 (ESP32-based) | FluidNC is planned; final configuration is untested. |
-| Stepper motors | 3 × NEMA 17, 42 × 42 mm | 1 × X and 2 × Y, as described in the planned pinout. |
-| Motor drivers | 3 × DRV8825 | Listed in the assembly guide/BOM. |
-| Pen lift | 1 × SG90 servo | Intended for pen-up / pen-down movement. |
-| Limit switches | 2 | One planned for X and one for Y homing. |
-| Power supply | Mean Well LRS-150-24, 24 V DC | Verify wiring and protection before powering. |
-| Motion system | GT2 belt drive, 20-tooth pulleys, Delrin V-wheels | See the BOM for quantities and supplier references. |
-| Frame | 2020 / 2040 V-slot aluminium extrusion | Exact cut lengths and hardware are in the BOM and guide. |
-| Voltage converter | XL6009 DC-DC module | Voltage/current settings and the exact servo power arrangement still need commissioning checks. |
+| Component         | Planned specification                             | Notes                                                                                           |
+| ----------------- | ------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| Controller        | MKS DLC32 V2.1 (ESP32-based)                      | FluidNC is planned; final configuration is untested (for now at least).                         |
+| Stepper motors    | 3 × NEMA 17, 42 × 42 mm                           | 1x (x axis) and 2× (y axis)                                                                     |
+| Motor drivers     | 3 × DRV8825                                       | Listed in the assembly guide/BOM.                                                               |
+| Pen lift          | 1 × SG90 servo                                    | Intended for pen-up / pen-down movement.                                                        |
+| Limit switches    | 2                                                 | One for X and one for Y homing.                                                                 |
+| Power supply      | Mean Well LRS-150-24, 24 V DC                     | Verify wiring and protection before powering.                                                   |
+| Motion system     | GT2 belt drive, 20-tooth pulleys, Delrin V-wheels | See the BOM for quantities and supplier references.                                             |
+| Frame             | 2020 / 2040 V-slot aluminium extrusion            | Exact cut lengths and hardware are in the BOM and guide.                                        |
+| Voltage converter | XL6009 DC-DC module                               | Voltage/current settings and the exact servo power arrangement still need commissioning checks. |
 
 **Important:** This table summarizes the planned design. Check the current BOM, CAD, and assembly guide together before ordering or wiring parts. Prices and supplier availability can change.
 
 ## Bill of materials
 
-- [Updated BOM spreadsheet (XLSX)](BOM/CNC_Pen-ploter_updated_(sheet2).xlsx)
+- [Updated BOM spreadsheet (XLSX)](<BOM/CNC_Pen-ploter_updated_(sheet2).xlsx>)
 - [BOM CSV](BOM/BOM.csv)
 - [BOM folder and historical files](BOM/)
 
@@ -60,7 +60,9 @@ The BOM lists mechanical hardware, extrusions, printed parts, electronics, wires
 
 ## Assembly guide
 
-Download the 41-page [CNC Pen Plotter Assembly & Wiring Guide (PDF)](https://github.com/Nitin-2468-dev/CNC-pen-ploter/releases/download/v1.0/GUIDE_updated.pdf) from the [v1.0 release](https://github.com/Nitin-2468-dev/CNC-pen-ploter/releases/tag/v1.0).
+[![GUIDE](./Docs/01.png)](./Docs/README.md)
+
+> Download the 41-page [CNC Pen Plotter Assembly & Wiring Guide (PDF)](https://github.com/Nitin-2468-dev/CNC-pen-ploter/releases/download/v1.0/GUIDE_updated.pdf) from the [v1.0 release](https://github.com/Nitin-2468-dev/CNC-pen-ploter/releases/tag/v1.0).
 
 The guide includes:
 
@@ -72,7 +74,7 @@ The guide includes:
 - Electronics mounting (pages 31–36)
 - Wiring sequence (pages 37–41)
 
-Review the complete guide before assembly. In particular, carefully verify power-supply polarity, voltage-converter settings, controller connections, and switch/servo pin assignments against the hardware documentation before applying power.
+Review the complete guide before assembly.
 
 ## CAD files
 
@@ -82,30 +84,25 @@ The repository includes exported CAD files:
 - [Complete assembly with cables — STEP](CAD/Final%20Build%20with%20Cables.step)
 - [Assembly export — ZIP](CAD/Final%20Build.zip)
 - [Printable and component CAD files](CAD/3D%20print/)
-- [Onshape assembly](https://cad.onshape.com/documents/cf470daa2010d17c98d59f14/w/9217e9e7d147d62c9b62fa11/e/110cbc33f4cd917d186821d2?renderMode=0&uiState=6a961a29e612142b9e0b4a56)
-- [Earlier Onshape document](https://cad.onshape.com/documents/d076f74775598c2c224d3ddc/w/a742f32d9e5f68d3a0ed4f3e/e/59cbca8dd54cfc34bc3f8ac0?renderMode=0&leftPanel=false&uiState=6a25ab40411915944ca1e2be)
+- [wiring & guide Onshape assembly](https://cad.onshape.com/documents/cf470daa2010d17c98d59f14/w/9217e9e7d147d62c9b62fa11/e/110cbc33f4cd917d186821d2?renderMode=0&uiState=6a961a29e612142b9e0b4a56)
+- [Onshape document modelling](https://cad.onshape.com/documents/d076f74775598c2c224d3ddc/w/a742f32d9e5f68d3a0ed4f3e/e/59cbca8dd54cfc34bc3f8ac0?renderMode=0&leftPanel=false&uiState=6a25ab40411915944ca1e2be)
 
 The [3D print folder README](CAD/3D%20print/README.md) lists printed parts and recommended print settings. Some names in that guide do not match the exported filenames, so check the actual filenames in the folder before slicing.
 
 ## Electronics and firmware
 
 - [Firmware overview](Firmware/README.md)
-- [Planned pinout](Firmware/fluidnc-pinout.md)
+- [Pinout](Firmware/fluidnc-pinout.md)
 - [FluidNC configuration placeholder](Firmware/fluidnc-config.yaml)
 - [FluidNC project](https://github.com/bdring/FluidNC)
 - [Makerbase MKS DLC32 resources](https://github.com/makerbase-mks/MKS-DLC32)
 
-The current `fluidnc-config.yaml` contains only a TODO comment. The pinout document is marked as planned and does not yet specify final GPIO assignments. Do not flash the placeholder as a working configuration. Complete and validate the pin mapping, motor directions, steps/mm, travel limits, homing behaviour, and servo settings during commissioning.
-
 ## Development images
 
 - [Development timeline and screenshots](Images/README.md)
-- [Overall CAD render](Images/render1.png)
-- [Belt routing](Images/Belt.png)
-- [Controller placement](Images/Cotroller.png)
-- [Pen-lift mechanism](Images/pen_lift.png)
-
-These images document the CAD/design work; unless explicitly labelled otherwise, they should not be interpreted as photographs of a completed, operating machine.
+  ![Belt routing](Images/Belt.png)
+  ![Controller placement](Images/Cotroller.png)
+  ![Pen-lift mechanism](Images/pen_lift.png)
 
 ## Current status and roadmap
 
@@ -124,20 +121,16 @@ Status based on the repository documentation:
 - [ ] First controlled motion test
 - [ ] First drawing test
 
-Update this checklist as the physical build progresses, and distinguish completed tests from planned work.
-
 ## Safety
 
-This design includes mains-powered equipment and a 24 V DC power supply. Mains wiring can cause serious injury or fire. Disconnect power before changing wiring, verify protective earthing and strain relief, use suitable fusing and enclosures, and have mains-side work checked by a qualified person. Confirm the controller, drivers, servo, and converter wiring from their manufacturers' documentation before powering the machine.
+This design includes mains-powered equipment and a 24 V DC power supply. Mains wiring can cause serious injury or fire. Disconnect power before changing wiring.
 
 ## Credits and licensing
 
-This design is inspired by the [OpenBuilds ACRO DrawBot](https://builds.openbuilds.com/builds/a1-acro-draw-bot.10605/). Please consult the upstream project for its original design and attribution details.
+This design is inspired by the [OpenBuilds ACRO DrawBot](https://www.youtube.com/watch?v=k0zMfXdwclU). Please consult the upstream project for its original design and attribution details.
 
 The repository includes [LICENSE.md](LICENSE.md), which applies the **CERN Open Hardware Licence Version 2 — Strongly Reciprocal (CERN-OHL-S v2)** to covered source. Read the complete licence before reusing or distributing the design. External components, upstream designs, and third-party software may have their own terms.
 
 ## Contributing and feedback
 
 Issues and corrections are welcome. Helpful contributions include verified assembly photos, tested FluidNC pin assignments, measured travel limits, reproducible drawing tests, corrected BOM links, and improvements to the assembly guide.
-
-When reporting a problem, include the file or assembly step involved, the hardware revision, and what you observed.

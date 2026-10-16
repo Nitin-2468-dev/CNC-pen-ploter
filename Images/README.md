@@ -1,119 +1,147 @@
-# CNC pen ploter Development Timeline
+# CNC Pen Plotter - Development Timeline
 
-This page documents the development of the  A3 CNC Pen Plotter from the initial concept through the final CAD design.
+This is the story of how I went from an idea for a handwriting robot to a detailed A3 CNC Pen Plotter CAD design and its assembly and wiring documentation.
+
+I was learning Onshape while designing the machine, so I had to learn the software, figure out how real hardware fits together, redesign parts when things did not work, make the BOM, and find a way to document the whole thing. The timeline below shows the actual process-including the detours and the parts that became much harder than I expected.
+
+[![CAD render of the CNC Pen Plotter](./render1.png)](./render1.png)
+
+**Where I am now:** I have a detailed CAD assembly and have worked on the BOM, STEP exports, and the assembly/wiring guide. I have **not** assembled the physical machine yet, so I have not tested real motion, homing, pen lift, or drawing quality. The pictures below show my CAD work and documentation—not a finished, working machine.
+
+- [Main repository](https://github.com/Nitin-2468-dev/CNC-pen-ploter)
+- [Forge project and full devlog history](https://forge.hackclub.com/projects/3639)
+- [YouTube CAD assembly animation](https://youtu.be/2c1DS8Nv8dU)
+- [Assembly and wiring guide (PDF)](https://github.com/Nitin-2468-dev/CNC-pen-ploter/releases/download/v1.0/GUIDE_updated.pdf)
+- [Bill of materials](../BOM/)
+
+> **About this gallery:** I logged 62 devlogs for this project. There are hundreds of embedded media references, so I picked representative images for this page instead of putting every attachment here. The **journal titles and dates under each image link to the original Forge entry**, where you can read the full notes and see its other screenshots. The complete [Forge devlog archive](https://forge.hackclub.com/projects/3639) contains the full day-by-day story.
+
+## 1. Inspiration, goals, and early research
+
+<sub>April 29 – May 7, 2026</sub>
+
+I originally called this idea **Glyph-Writer**. I wanted to make a CNC plotter that could write in a way that looked more like real handwriting, rather than simply drawing a normal font. Before I could build anything, I had to research how plotters work, compare different machine layouts, and learn about the problems I would need to solve: uneven paper, vibration, pen pressure, backlash, and even turning pages. I also explored how images and vectors could be turned into paths for the pen. At this point I was still figuring out what I actually needed to build.
+
+<table>
+<tbody>
+<tr><td width="50%" align="center" valign="top"><a href="https://cdn.hackclub.com/019dd933-023c-766a-a3ed-222cced3b909/Cover.webp"><img src="https://cdn.hackclub.com/019dd933-023c-766a-a3ed-222cced3b909/Cover.webp" alt="Development image: Glyph-Writer" width="420"></a><br><strong><a href="https://forge.hackclub.com/projects/3639/devlogs/49147">Glyph-Writer</a></strong><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49147">Apr 29, 2026 · 5.0h logged</a></sub></td><td width="50%" align="center" valign="top"><a href="https://cdn.hackclub.com/019dded8-172a-77bf-a78e-c6dc3f20698d/Screenshot%202026-04-28%20204408.png"><img src="https://cdn.hackclub.com/019dded8-172a-77bf-a78e-c6dc3f20698d/Screenshot%202026-04-28%20204408.png" alt="Development image: Changes &amp; Solutions" width="420"></a><br><strong><a href="https://forge.hackclub.com/projects/3639/devlogs/49148">Changes &amp; Solutions</a></strong><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49148">Apr 30, 2026 · 8.0h logged</a></sub></td></tr>
+<tr><td width="50%" align="center" valign="top"><a href="https://cdn.hackclub.com/019de47e-26ed-72b2-ad5b-cd56f7291717/image.png"><img src="https://cdn.hackclub.com/019de47e-26ed-72b2-ad5b-cd56f7291717/image.png" alt="Development image: learning" width="420"></a><br><strong><a href="https://forge.hackclub.com/projects/3639/devlogs/49149">learning</a></strong><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49149">May 1, 2026 · 3.0h logged</a></sub></td><td width="50%" align="center" valign="top"><a href="https://cdn.hackclub.com/019de95c-3127-7402-925c-e61642a79770/image.png"><img src="https://cdn.hackclub.com/019de95c-3127-7402-925c-e61642a79770/image.png" alt="Development image: thinking" width="420"></a><br><strong><a href="https://forge.hackclub.com/projects/3639/devlogs/49150">thinking</a></strong><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49150">May 2, 2026 · 1.0h logged</a></sub></td></tr>
+<tr><td width="50%" align="center" valign="top"><a href="https://cdn.hackclub.com/019df946-6198-7a6a-9080-f4c5cf23a576/image.png"><img src="https://cdn.hackclub.com/019df946-6198-7a6a-9080-f4c5cf23a576/image.png" alt="Development image: This FIRE" width="420"></a><br><strong><a href="https://forge.hackclub.com/projects/3639/devlogs/49153">This FIRE</a></strong><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49153">May 5, 2026 · 0.0h logged</a></sub></td><td width="50%" align="center" valign="top"><a href="https://cdn.hackclub.com/019dfe79-230a-70b5-9c47-e96c46168ca2/image.png"><img src="https://cdn.hackclub.com/019dfe79-230a-70b5-9c47-e96c46168ca2/image.png" alt="Development image: options ?" width="420"></a><br><strong><a href="https://forge.hackclub.com/projects/3639/devlogs/49154">options ?</a></strong><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49154">May 6, 2026 · 1.0h logged</a></sub></td></tr>
+<tr><td width="50%" align="center" valign="top"><a href="https://cdn.hackclub.com/019ddedb-abb5-7951-8d72-9b8bb86286b8/image.png"><img src="https://cdn.hackclub.com/019ddedb-abb5-7951-8d72-9b8bb86286b8/image.png" alt="Development image: Changes &amp; Solutions" width="420"></a><br><strong><a href="https://forge.hackclub.com/projects/3639/devlogs/49148">Changes &amp; Solutions</a></strong><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49148">Additional view from this journal</a></sub><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49148">Apr 30, 2026 · 8.0h logged</a></sub></td><td width="50%"></td></tr>
+</tbody>
+</table>
+
+## 2. First CAD frame and mechanical redesign
+
+<sub>May 8 – May 16, 2026</sub>
+
+I started my first Onshape model using an A3 sheet as the reference, then added space around it for the frame, belts, and mounting hardware. I was learning CAD as I went, so even connecting two V-slot extrusions was a challenge: I had to learn mates, understand corner brackets and T-nuts, and work out how wheels, spacers, and screws were supposed to fit. My first design did not give me the space I needed, and I lost useful drawing area while trying to make everything fit. I had to rethink the frame and move from **2020 to 2040 V-slot extrusions**. I also explored using 6 mm acrylic plates because I was concerned that fully printed plates could flex too much. This was not a one-time redesign—I had to revisit the model repeatedly as I found problems.
+
+<table>
+<tbody>
+<tr><td width="50%" align="center" valign="top"><a href="https://cdn.hackclub.com/019e0899-0aa7-7963-8599-75f7bb00d411/image.png"><img src="https://cdn.hackclub.com/019e0899-0aa7-7963-8599-75f7bb00d411/image.png" alt="Development image: CAD" width="420"></a><br><strong><a href="https://forge.hackclub.com/projects/3639/devlogs/49156">CAD</a></strong><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49156">May 8, 2026 · 3.0h logged</a></sub></td><td width="50%" align="center" valign="top"><a href="https://cdn.hackclub.com/019e0dec-5785-788d-9984-9935e563d099/Screenshot%202026-05-09%20130530.png"><img src="https://cdn.hackclub.com/019e0dec-5785-788d-9984-9935e563d099/Screenshot%202026-05-09%20130530.png" alt="Development image: i hate Corner" width="420"></a><br><strong><a href="https://forge.hackclub.com/projects/3639/devlogs/49157">i hate Corner</a></strong><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49157">May 9, 2026 · 7.0h logged</a></sub></td></tr>
+<tr><td width="50%" align="center" valign="top"><a href="https://cdn.hackclub.com/019e1303-19df-786a-a684-b4d48a0867b1/Screenshot%202026-05-10%20110444.png"><img src="https://cdn.hackclub.com/019e1303-19df-786a-a684-b4d48a0867b1/Screenshot%202026-05-10%20110444.png" alt="Development image: i hate myslef" width="420"></a><br><strong><a href="https://forge.hackclub.com/projects/3639/devlogs/49158">i hate myslef</a></strong><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49158">May 10, 2026 · 7.0h logged</a></sub></td><td width="50%" align="center" valign="top"><a href="https://cdn.hackclub.com/019e1d2a-5245-7bc0-8599-75ea4be3e53c/image.png"><img src="https://cdn.hackclub.com/019e1d2a-5245-7bc0-8599-75ea4be3e53c/image.png" alt="Development image: Controller" width="420"></a><br><strong><a href="https://forge.hackclub.com/projects/3639/devlogs/49160">Controller</a></strong><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49160">May 12, 2026 · 1.0h logged</a></sub></td></tr>
+<tr><td width="50%" align="center" valign="top"><a href="https://cdn.hackclub.com/019e30b3-a9eb-79c1-bcc0-e7d923ee008c/Screenshot%202026-05-16%20173459.png"><img src="https://cdn.hackclub.com/019e30b3-a9eb-79c1-bcc0-e7d923ee008c/Screenshot%202026-05-16%20173459.png" alt="Development image: CAD &amp; Research" width="420"></a><br><strong><a href="https://forge.hackclub.com/projects/3639/devlogs/49163">CAD &amp; Research</a></strong><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49163">May 16, 2026 · 6.0h logged</a></sub></td><td width="50%" align="center" valign="top"><a href="https://cdn.hackclub.com/019e0def-e932-7ba7-847b-908c3bc05a98/Screenshot%202026-05-09%20160639.png"><img src="https://cdn.hackclub.com/019e0def-e932-7ba7-847b-908c3bc05a98/Screenshot%202026-05-09%20160639.png" alt="Development image: i hate Corner" width="420"></a><br><strong><a href="https://forge.hackclub.com/projects/3639/devlogs/49157">i hate Corner</a></strong><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49157">Additional view from this journal</a></sub><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49157">May 9, 2026 · 7.0h logged</a></sub></td></tr>
+</tbody>
+</table>
+
+## 3. Motion system, controller research, and BOM sourcing
+
+<sub>May 18 – May 30, 2026</sub>
+
+Once the basic frame started making sense, I moved on to the motion system and the parts I would need to buy. I spent time figuring out GT2 belts, pulleys, idlers, belt tensioning, and how the X and Y axes should move. I researched controllers and chose to explore the **MKS DLC32 V2.1 with FluidNC**. Then came the BOM: finding real suppliers, checking prices and lengths, and discovering that some parts were out of stock or only sold in sizes that did not fit my design. I was still changing the CAD while sourcing parts, so the mechanical design and the BOM kept affecting each other.
+
+<table>
+<tbody>
+<tr><td width="50%" align="center" valign="top"><a href="https://cdn.hackclub.com/019e3c2a-a240-70c2-882c-6978516b3d3e/image.png"><img src="https://cdn.hackclub.com/019e3c2a-a240-70c2-882c-6978516b3d3e/image.png" alt="Development image: i hate Cables" width="420"></a><br><strong><a href="https://forge.hackclub.com/projects/3639/devlogs/49165">i hate Cables</a></strong><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49165">May 18, 2026 · 3.0h logged</a></sub></td><td width="50%" align="center" valign="top"><a href="https://cdn.hackclub.com/019e4b7f-ef70-711f-8728-17086d9803b6/1000057014.png"><img src="https://cdn.hackclub.com/019e4b7f-ef70-711f-8728-17086d9803b6/1000057014.png" alt="Development image: Controller" width="420"></a><br><strong><a href="https://forge.hackclub.com/projects/3639/devlogs/49168">Controller</a></strong><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49168">May 21, 2026 · 1.0h logged</a></sub></td></tr>
+<tr><td width="50%" align="center" valign="top"><a href="https://cdn.hackclub.com/019e5085-2e56-7c72-b2c6-10b7bebc5f2d/1000057039.png"><img src="https://cdn.hackclub.com/019e5085-2e56-7c72-b2c6-10b7bebc5f2d/1000057039.png" alt="Development image: Researching" width="420"></a><br><strong><a href="https://forge.hackclub.com/projects/3639/devlogs/49169">Researching</a></strong><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49169">May 22, 2026 · 2.0h logged</a></sub></td><td width="50%" align="center" valign="top"><a href="https://cdn.hackclub.com/019e5606-118c-7dc6-bcfa-06b39d86e8fa/1000057153.png"><img src="https://cdn.hackclub.com/019e5606-118c-7dc6-bcfa-06b39d86e8fa/1000057153.png" alt="Development image: MKS DLC32 controller" width="420"></a><br><strong><a href="https://forge.hackclub.com/projects/3639/devlogs/49170">MKS DLC32 controller</a></strong><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49170">May 23, 2026 · 1.5h logged</a></sub></td></tr>
+<tr><td width="50%" align="center" valign="top"><a href="https://cdn.hackclub.com/019e5b25-19e5-78ba-9a60-c43d6076c10d/1000057254.png"><img src="https://cdn.hackclub.com/019e5b25-19e5-78ba-9a60-c43d6076c10d/1000057254.png" alt="Development image: Draft" width="420"></a><br><strong><a href="https://forge.hackclub.com/projects/3639/devlogs/49171">Draft</a></strong><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49171">May 24, 2026 · 2.0h logged</a></sub></td><td width="50%" align="center" valign="top"><a href="https://cdn.hackclub.com/019e605d-65c2-7c4c-89e5-f8ef804e2283/image.png"><img src="https://cdn.hackclub.com/019e605d-65c2-7c4c-89e5-f8ef804e2283/image.png" alt="Development image: DRAFT — BOM" width="420"></a><br><strong><a href="https://forge.hackclub.com/projects/3639/devlogs/49172">DRAFT — BOM</a></strong><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49172">May 25, 2026 · 2.0h logged</a></sub></td></tr>
+<tr><td width="50%" align="center" valign="top"><a href="https://cdn.hackclub.com/019e6586-3f02-79f0-bb00-e7f9f990616e/Screenshot%202026-05-26%20132303.png"><img src="https://cdn.hackclub.com/019e6586-3f02-79f0-bb00-e7f9f990616e/Screenshot%202026-05-26%20132303.png" alt="Development image: CAD" width="420"></a><br><strong><a href="https://forge.hackclub.com/projects/3639/devlogs/49173">CAD</a></strong><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49173">May 26, 2026 · 4.0h logged</a></sub></td><td width="50%" align="center" valign="top"><a href="https://cdn.hackclub.com/019e6a9b-c99d-7fe9-a072-feddb3a7e485/image.png"><img src="https://cdn.hackclub.com/019e6a9b-c99d-7fe9-a072-feddb3a7e485/image.png" alt="Development image: BOM &amp; Sources" width="420"></a><br><strong><a href="https://forge.hackclub.com/projects/3639/devlogs/49174">BOM &amp; Sources</a></strong><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49174">May 27, 2026 · 2.0h logged</a></sub></td></tr>
+<tr><td width="50%" align="center" valign="top"><a href="https://cdn.hackclub.com/019e6f1d-e427-7f2f-9e51-f9258357ba3c/image.png"><img src="https://cdn.hackclub.com/019e6f1d-e427-7f2f-9e51-f9258357ba3c/image.png" alt="Development image: I did more of what i was doing" width="420"></a><br><strong><a href="https://forge.hackclub.com/projects/3639/devlogs/49175">I did more of what i was doing</a></strong><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49175">May 28, 2026 · 1.0h logged</a></sub></td><td width="50%" align="center" valign="top"><a href="https://cdn.hackclub.com/019e74ca-9489-7a40-a1ce-a68fd35b2c9d/Screenshot%202026-05-29%20160128.png"><img src="https://cdn.hackclub.com/019e74ca-9489-7a40-a1ce-a68fd35b2c9d/Screenshot%202026-05-29%20160128.png" alt="Development image: 3th times the charm (Rebuild form scratch)" width="420"></a><br><strong><a href="https://forge.hackclub.com/projects/3639/devlogs/49176">3th times the charm (Rebuild form scratch)</a></strong><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49176">May 29, 2026 · 7.5h logged</a></sub></td></tr>
+<tr><td width="50%" align="center" valign="top"><a href="https://cdn.hackclub.com/019e79d5-a3c9-7ba4-95f7-04559773abf7/image.png"><img src="https://cdn.hackclub.com/019e79d5-a3c9-7ba4-95f7-04559773abf7/image.png" alt="Development image: CAD" width="420"></a><br><strong><a href="https://forge.hackclub.com/projects/3639/devlogs/49177">CAD</a></strong><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49177">May 30, 2026 · 2.0h logged</a></sub></td><td width="50%" align="center" valign="top"><a href="https://cdn.hackclub.com/019e74ca-aab0-74c8-93cc-972b7e209d2b/Screenshot%202026-05-29%20164426.png"><img src="https://cdn.hackclub.com/019e74ca-aab0-74c8-93cc-972b7e209d2b/Screenshot%202026-05-29%20164426.png" alt="Development image: 3th times the charm (Rebuild form scratch)" width="420"></a><br><strong><a href="https://forge.hackclub.com/projects/3639/devlogs/49176">3th times the charm (Rebuild form scratch)</a></strong><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49176">Additional view from this journal</a></sub><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49176">May 29, 2026 · 7.5h logged</a></sub></td></tr>
+</tbody>
+</table>
+
+## 4. Pen-lift mechanism and completed CAD assembly
+
+<sub>May 31 – June 7, 2026</sub>
+
+The pen lift became another rabbit hole. I looked at the OpenBuilds SCRIBE mechanism and different miniature linear guides, tried to understand how a spring-loaded pen holder might work, and then built a model around an **SG90 servo and pen carriage**. Getting the mates and movement right took trial and error; some approaches did not work, so I had to back up and try something else. I also modelled the limit switch and checked how the pen mechanism would fit onto the gantry. Some imported parts were so large or complicated that converting them from STL to STEP took a long time and made Onshape struggle. On **June 7**, I finally considered the main CAD assembly complete: the frame, motion system, pen lift, electronics placement, and cable-routing provisions were in the model. That meant the design was assembled in CAD—not that I had built or tested the real machine.
+
+<table>
+<tbody>
+<tr><td width="50%" align="center" valign="top"><a href="https://cdn.hackclub.com/019e7f38-d68d-760b-842f-c0e8625be105/Screenshot%202026-05-31%20000455.png"><img src="https://cdn.hackclub.com/019e7f38-d68d-760b-842f-c0e8625be105/Screenshot%202026-05-31%20000455.png" alt="Development image: STL to STEP" width="420"></a><br><strong><a href="https://forge.hackclub.com/projects/3639/devlogs/49178">STL to STEP</a></strong><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49178">May 31, 2026 · 3.0h logged</a></sub></td><td width="50%" align="center" valign="top"><a href="https://cdn.hackclub.com/019e845b-ded2-79ad-b2b5-be5a9a655901/image.png"><img src="https://cdn.hackclub.com/019e845b-ded2-79ad-b2b5-be5a9a655901/image.png" alt="Development image: Research and Evaluation of Pen-Lift Mechanisms" width="420"></a><br><strong><a href="https://forge.hackclub.com/projects/3639/devlogs/49179">Research and Evaluation of Pen-Lift Mechanisms</a></strong><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49179">Jun 1, 2026 · 1.0h logged</a></sub></td></tr>
+<tr><td width="50%" align="center" valign="top"><a href="https://cdn.hackclub.com/019e895c-3e96-77c9-a4d7-c148d0b8f4d5/Screenshot%202026-06-02%20190654.png"><img src="https://cdn.hackclub.com/019e895c-3e96-77c9-a4d7-c148d0b8f4d5/Screenshot%202026-06-02%20190654.png" alt="Development image: pen lift" width="420"></a><br><strong><a href="https://forge.hackclub.com/projects/3639/devlogs/49180">pen lift</a></strong><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49180">Jun 2, 2026 · 1.0h logged</a></sub></td><td width="50%" align="center" valign="top"><a href="https://cdn.hackclub.com/019e8ea6-22fc-7f35-bc9c-43380d0fdaac/image.png"><img src="https://cdn.hackclub.com/019e8ea6-22fc-7f35-bc9c-43380d0fdaac/image.png" alt="Development image: i tired" width="420"></a><br><strong><a href="https://forge.hackclub.com/projects/3639/devlogs/49181">i tired</a></strong><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49181">Jun 3, 2026 · 3.0h logged</a></sub></td></tr>
+<tr><td width="50%" align="center" valign="top"><a href="https://cdn.hackclub.com/019e9450-0b35-74c9-80f1-9872516abbc7/Screenshot%202026-06-04%20150554.png"><img src="https://cdn.hackclub.com/019e9450-0b35-74c9-80f1-9872516abbc7/Screenshot%202026-06-04%20150554.png" alt="Development image: pen lift" width="420"></a><br><strong><a href="https://forge.hackclub.com/projects/3639/devlogs/49182">pen lift</a></strong><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49182">Jun 4, 2026 · 6.0h logged</a></sub></td><td width="50%" align="center" valign="top"><a href="https://cdn.hackclub.com/019e983b-ef03-7af6-9b08-cac35fa184b3/image.png"><img src="https://cdn.hackclub.com/019e983b-ef03-7af6-9b08-cac35fa184b3/image.png" alt="Development image: 1 out of 2" width="420"></a><br><strong><a href="https://forge.hackclub.com/projects/3639/devlogs/49183">1 out of 2</a></strong><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49183">Jun 5, 2026 · 5.0h logged</a></sub></td></tr>
+<tr><td width="50%" align="center" valign="top"><a href="https://cdn.hackclub.com/019e9e16-ef53-7adc-a2d3-fc840bde09a6/image.png"><img src="https://cdn.hackclub.com/019e9e16-ef53-7adc-a2d3-fc840bde09a6/image.png" alt="Development image: CAD - almost done" width="420"></a><br><strong><a href="https://forge.hackclub.com/projects/3639/devlogs/49184">CAD - almost done</a></strong><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49184">Jun 6, 2026 · 6.0h logged</a></sub></td><td width="50%" align="center" valign="top"><a href="https://cdn.hackclub.com/019ea32f-5751-7721-963f-3b9f121984af/Screenshot%202026-06-07%20165208.png"><img src="https://cdn.hackclub.com/019ea32f-5751-7721-963f-3b9f121984af/Screenshot%202026-06-07%20165208.png" alt="Development image: CAD is complete" width="420"></a><br><strong><a href="https://forge.hackclub.com/projects/3639/devlogs/49185">CAD is complete</a></strong><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49185">Jun 7, 2026 · 4.0h logged</a></sub></td></tr>
+<tr><td width="50%" align="center" valign="top"><a href="https://cdn.hackclub.com/019ea333-52ae-77cc-995f-1d9a4ef05cae/image.png"><img src="https://cdn.hackclub.com/019ea333-52ae-77cc-995f-1d9a4ef05cae/image.png" alt="Development image: CAD is complete" width="420"></a><br><strong><a href="https://forge.hackclub.com/projects/3639/devlogs/49185">CAD is complete</a></strong><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49185">Additional view from this journal</a></sub><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49185">Jun 7, 2026 · 4.0h logged</a></sub></td><td width="50%"></td></tr>
+</tbody>
+</table>
+
+## 5. BOM refinement, documentation, and review
+
+<sub>June 8 – June 13, 2026</sub>
+
+Finishing the CAD did not mean I was nearly done with everything. I still had to count every part, calculate quantities, find suppliers, check confusing listings, and make the BOM usable. I changed some hardware choices after checking what was actually available. I also started organising the GitHub repository and formatting the project documentation so another person could understand the design. I asked for feedback and made review-related changes. The cost figures in these older screenshots are snapshots from that part of the process, so I would use the current BOM files for the latest estimate.
+
+<table>
+<tbody>
+<tr><td width="50%" align="center" valign="top"><a href="https://cdn.hackclub.com/019ea861-8845-702c-bd2e-d5b696b6ec97/image.png"><img src="https://cdn.hackclub.com/019ea861-8845-702c-bd2e-d5b696b6ec97/image.png" alt="Development image: BOM" width="420"></a><br><strong><a href="https://forge.hackclub.com/projects/3639/devlogs/49186">BOM</a></strong><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49186">Jun 8, 2026 · 4.0h logged</a></sub></td><td width="50%" align="center" valign="top"><a href="https://cdn.hackclub.com/019ead55-b95a-7d0c-bbb4-2eedbf9d3226/image.png"><img src="https://cdn.hackclub.com/019ead55-b95a-7d0c-bbb4-2eedbf9d3226/image.png" alt="Development image: BOM" width="420"></a><br><strong><a href="https://forge.hackclub.com/projects/3639/devlogs/49187">BOM</a></strong><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49187">Jun 9, 2026 · 6.0h logged</a></sub></td></tr>
+<tr><td width="50%" align="center" valign="top"><a href="https://cdn.hackclub.com/019eb279-6742-7621-9cae-a38427a2b1c9/image.png"><img src="https://cdn.hackclub.com/019eb279-6742-7621-9cae-a38427a2b1c9/image.png" alt="Development image: Git Repo" width="420"></a><br><strong><a href="https://forge.hackclub.com/projects/3639/devlogs/49188">Git Repo</a></strong><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49188">Jun 10, 2026 · 4.0h logged</a></sub></td><td width="50%" align="center" valign="top"><a href="https://cdn.hackclub.com/019eb764-e067-7fe6-9c2c-87b5d1acafd6/image.png"><img src="https://cdn.hackclub.com/019eb764-e067-7fe6-9c2c-87b5d1acafd6/image.png" alt="Development image: updating / formating" width="420"></a><br><strong><a href="https://forge.hackclub.com/projects/3639/devlogs/49189">updating / formating</a></strong><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49189">Jun 11, 2026 · 2.0h logged</a></sub></td></tr>
+<tr><td width="50%" align="center" valign="top"><a href="https://cdn.hackclub.com/019ebcd7-ea3b-7474-a6e7-35283acfa6e5/image.png"><img src="https://cdn.hackclub.com/019ebcd7-ea3b-7474-a6e7-35283acfa6e5/image.png" alt="Development image: waiting for a fix" width="420"></a><br><strong><a href="https://forge.hackclub.com/projects/3639/devlogs/49190">waiting for a fix</a></strong><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49190">Jun 12, 2026 · 1.0h logged</a></sub></td><td width="50%" align="center" valign="top"><a href="https://cdn.hackclub.com/019ec1ef-286d-70e5-9f1d-3aa03c731f4c/image.png"><img src="https://cdn.hackclub.com/019ec1ef-286d-70e5-9f1d-3aa03c731f4c/image.png" alt="Development image: checked it before SHIPING." width="420"></a><br><strong><a href="https://forge.hackclub.com/projects/3639/devlogs/49191">checked it before SHIPING.</a></strong><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49191">Jun 13, 2026 · 1.0h logged</a></sub></td></tr>
+<tr><td width="50%" align="center" valign="top"><a href="https://cdn.hackclub.com/019ead56-51b5-7567-9770-bf705b7bcb27/image.png"><img src="https://cdn.hackclub.com/019ead56-51b5-7567-9770-bf705b7bcb27/image.png" alt="Development image: BOM" width="420"></a><br><strong><a href="https://forge.hackclub.com/projects/3639/devlogs/49187">BOM</a></strong><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49187">Additional view from this journal</a></sub><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49187">Jun 9, 2026 · 6.0h logged</a></sub></td><td width="50%"></td></tr>
+</tbody>
+</table>
+
+## 6. STEP exports and CAD animation experiments
+
+<sub>July 11 – July 27, 2026</sub>
+
+After getting feedback, I added STEP exports and looked for a better way to present the project. I wanted to make a clear, polished assembly animation instead of showing everything being put together in a few seconds. I tried moving the Onshape assembly into Blender, but the workflow was not straightforward. I had to figure out export formats, separate and arrange the parts, rename them, apply materials, and make the screws and other details visible. The black-on-black parts were especially hard to see, and I spent more time experimenting with Blender add-ons and blueprint-style effects. I did get some useful results, but I could not get the animation finished to the standard I wanted before the deadline. I eventually gave up on the animation and focused on the PDF guide.
+
+<table>
+<tbody>
+<tr><td width="50%" align="center" valign="top"><a href="https://cdn.hackclub.com/019f5093-74be-79ae-86cb-6e13645b354d/image.png"><img src="https://cdn.hackclub.com/019f5093-74be-79ae-86cb-6e13645b354d/image.png" alt="Development image: working on Reviewer requested changes" width="420"></a><br><strong><a href="https://forge.hackclub.com/projects/3639/devlogs/49192">working on Reviewer requested changes</a></strong><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49192">Jul 11, 2026 · 2.0h logged</a></sub></td><td width="50%" align="center" valign="top"><a href="https://cdn.hackclub.com/019f5b6d-8d24-751d-99c7-c2ab199f0f1a/image.png"><img src="https://cdn.hackclub.com/019f5b6d-8d24-751d-99c7-c2ab199f0f1a/image.png" alt="Development image: Renaming and Coloring" width="420"></a><br><strong><a href="https://forge.hackclub.com/projects/3639/devlogs/49193">Renaming and Coloring</a></strong><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49193">Jul 13, 2026 · 4.5h logged</a></sub></td></tr>
+<tr><td width="50%" align="center" valign="top"><a href="https://cdn.hackclub.com/019f6bf4-a3f0-73b5-97be-0611a9e6eda9/Screenshot%202026-07-16%20123435.png"><img src="https://cdn.hackclub.com/019f6bf4-a3f0-73b5-97be-0611a9e6eda9/Screenshot%202026-07-16%20123435.png" alt="Development image: Bledener . What do you need" width="420"></a><br><strong><a href="https://forge.hackclub.com/projects/3639/devlogs/49194">Bledener . What do you need</a></strong><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49194">Jul 16, 2026 · 5.0h logged</a></sub></td><td width="50%" align="center" valign="top"><a href="https://cdn.hackclub.com/019f758c-fa6a-76ff-afbc-8484b5fe863c/Screenshot%202026-07-17%20170937.png"><img src="https://cdn.hackclub.com/019f758c-fa6a-76ff-afbc-8484b5fe863c/Screenshot%202026-07-17%20170937.png" alt="Development image: Blender animation is not easy." width="420"></a><br><strong><a href="https://forge.hackclub.com/projects/3639/devlogs/49195">Blender animation is not easy.</a></strong><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49195">Jul 18, 2026 · 7.0h logged</a></sub></td></tr>
+<tr><td width="50%" align="center" valign="top"><a href="https://cdn.hackclub.com/019fa4bf-7795-741d-bf27-09ce1ef3205c/1d5ee9fd30729823.gif"><img src="https://cdn.hackclub.com/019fa4bf-7795-741d-bf27-09ce1ef3205c/1d5ee9fd30729823.gif" alt="Development image: Blueprint EFFECT IS HARD" width="420"></a><br><strong><a href="https://forge.hackclub.com/projects/3639/devlogs/49196">Blueprint EFFECT IS HARD</a></strong><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49196">Jul 27, 2026 · 2.0h logged</a></sub></td><td width="50%" align="center" valign="top"><a href="https://cdn.hackclub.com/019f5b6b-5e5c-7751-946c-88e8e1da97ad/Screenshot%202026-07-13%20094016.png"><img src="https://cdn.hackclub.com/019f5b6b-5e5c-7751-946c-88e8e1da97ad/Screenshot%202026-07-13%20094016.png" alt="Development image: Renaming and Coloring" width="420"></a><br><strong><a href="https://forge.hackclub.com/projects/3639/devlogs/49193">Renaming and Coloring</a></strong><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49193">Additional view from this journal</a></sub><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49193">Jul 13, 2026 · 4.5h logged</a></sub></td></tr>
+</tbody>
+</table>
+
+## 7. Building the assembly guide
+
+<sub>August 18 – August 25, 2026</sub>
+
+I wanted the assembly guide to feel more like LEGO instructions: one clear action at a time, so someone could follow it without guessing. But I could not find a simple way in Onshape to turn an assembly into a proper step-by-step sequence. So I came up with a workaround—and looking back, it was a pretty painful one. **For every step, I created an exploded view, duplicated it, changed one thing to show the next action, duplicated that version, and repeated the process for all the steps.** I was doing this over and over across the guide, not just making one exploded view for each subassembly. It let me show the assembly progressing piece by piece, but it also created an enormous amount of repeated CAD content. Later, as the guide grew, Onshape started lagging badly. Opening the document, changing a view, or simply continuing to work could take ages. I had spent so much time building this workaround that I still had to push through and finish the pages, index, and remaining sections. These images show the guide-making process and CAD views—not a physical machine being assembled.
+
+<table>
+<tbody>
+<tr><td width="50%" align="center" valign="top"><a href="https://cdn.hackclub.com/01a0163e-f5c2-77e1-8665-e26928b197ab/Screenshot%202026-08-18%20224731.png"><img src="https://cdn.hackclub.com/01a0163e-f5c2-77e1-8665-e26928b197ab/Screenshot%202026-08-18%20224731.png" alt="Development image: DEAD LINE" width="420"></a><br><strong><a href="https://forge.hackclub.com/projects/3639/devlogs/49197">DEAD LINE</a></strong><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49197">Aug 18, 2026 · 3.0h logged</a></sub></td><td width="50%" align="center" valign="top"><a href="https://cdn.hackclub.com/01a02aab-6ef7-7d6b-9b66-4ff93a8b4b3a/Screenshot%202026-08-22%20152148.png"><img src="https://cdn.hackclub.com/01a02aab-6ef7-7d6b-9b66-4ff93a8b4b3a/Screenshot%202026-08-22%20152148.png" alt="Development image: X-axis Assembly" width="420"></a><br><strong><a href="https://forge.hackclub.com/projects/3639/devlogs/49198">X-axis Assembly</a></strong><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49198">Aug 22, 2026 · 2.5h logged</a></sub></td></tr>
+<tr><td width="50%" align="center" valign="top"><a href="https://cdn.hackclub.com/01a02fdc-4104-75c9-b118-051584a8bb2d/Screenshot%202026-08-23%20234859.png"><img src="https://cdn.hackclub.com/01a02fdc-4104-75c9-b118-051584a8bb2d/Screenshot%202026-08-23%20234859.png" alt="Development image: Guide" width="420"></a><br><strong><a href="https://forge.hackclub.com/projects/3639/devlogs/49199">Guide</a></strong><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49199">Aug 23, 2026 · 5.0h logged</a></sub></td><td width="50%" align="center" valign="top"><a href="https://cdn.hackclub.com/01a034f4-3290-7c1e-870e-43fdbe404901/Screenshot%202026-08-24%20002503.png"><img src="https://cdn.hackclub.com/01a034f4-3290-7c1e-870e-43fdbe404901/Screenshot%202026-08-24%20002503.png" alt="Development image: more Guide" width="420"></a><br><strong><a href="https://forge.hackclub.com/projects/3639/devlogs/49200">more Guide</a></strong><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49200">Aug 24, 2026 · 3.0h logged</a></sub></td></tr>
+<tr><td width="50%" align="center" valign="top"><a href="https://cdn.hackclub.com/01a03a1c-4341-7860-96a9-dcf699d87ecd/Screenshot%202026-08-25%20183933.png"><img src="https://cdn.hackclub.com/01a03a1c-4341-7860-96a9-dcf699d87ecd/Screenshot%202026-08-25%20183933.png" alt="Development image: less Guide" width="420"></a><br><strong><a href="https://forge.hackclub.com/projects/3639/devlogs/49201">less Guide</a></strong><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49201">Aug 25, 2026 · 1.0h logged</a></sub></td><td width="50%" align="center" valign="top"><a href="https://cdn.hackclub.com/01a02aab-7bbb-7890-ab6b-0a5ef112eb3b/Screenshot%202026-08-22%20155727.png"><img src="https://cdn.hackclub.com/01a02aab-7bbb-7890-ab6b-0a5ef112eb3b/Screenshot%202026-08-22%20155727.png" alt="Development image: X-axis Assembly" width="420"></a><br><strong><a href="https://forge.hackclub.com/projects/3639/devlogs/49198">X-axis Assembly</a></strong><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49198">Additional view from this journal</a></sub><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49198">Aug 22, 2026 · 2.5h logged</a></sub></td></tr>
+</tbody>
+</table>
+
+## 8. Electronics, wiring, and final documentation push
+
+<sub>August 26 – August 31, 2026</sub>
+
+After the assembly guide, I still had to document the electronics and wiring. I found gaps in my original plan and had to account for parts such as the step-down converter and motor drivers. I had not modelled connectors on the NEMA 17 motors or servo, so I had to work out how the wires and connections should be represented. **Wiring in 3D was much harder than I expected.** I was making individual wires, tracing motor coils, naming connections, placing connectors, and trying to route everything neatly through the machine. Each stepper needed its A+/A− and B+/B− connections identified, and I also had the controller, limit switches, servo signal, power supply, and buck converter to account for. By then the Onshape document already contained the huge set of repeated exploded views for the guide, so the extra wiring work made the lag even more painful. In the final push, I kept editing guide pages, fixing the index, and updating the BOM while the deadline was getting closer. The CAD and documentation got much further, but the physical build and real-world testing were still ahead of me.
+
+<table>
+<tbody>
+<tr><td width="50%" align="center" valign="top"><a href="https://cdn.hackclub.com/01a03f44-cf7f-765b-a5cd-8114b7f5074d/Screenshot%202026-08-26%20123651.png"><img src="https://cdn.hackclub.com/01a03f44-cf7f-765b-a5cd-8114b7f5074d/Screenshot%202026-08-26%20123651.png" alt="Development image: Electronics and Wring" width="420"></a><br><strong><a href="https://forge.hackclub.com/projects/3639/devlogs/49202">Electronics and Wring</a></strong><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49202">Aug 26, 2026 · 3.0h logged</a></sub></td><td width="50%" align="center" valign="top"><a href="https://cdn.hackclub.com/01a04468-ab61-7331-bbc2-c954307ef4e6/Screenshot%202026-08-27%20115233.png"><img src="https://cdn.hackclub.com/01a04468-ab61-7331-bbc2-c954307ef4e6/Screenshot%202026-08-27%20115233.png" alt="Development image: Electronics" width="420"></a><br><strong><a href="https://forge.hackclub.com/projects/3639/devlogs/49203">Electronics</a></strong><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49203">Aug 27, 2026 · 4.0h logged</a></sub></td></tr>
+<tr><td width="50%" align="center" valign="top"><a href="https://cdn.hackclub.com/01a04990-ca32-7db5-aa38-4ba4fc5b64ad/Screenshot%202026-08-28%20010137.png"><img src="https://cdn.hackclub.com/01a04990-ca32-7db5-aa38-4ba4fc5b64ad/Screenshot%202026-08-28%20010137.png" alt="Development image: Wiring in 3D is HARD" width="420"></a><br><strong><a href="https://forge.hackclub.com/projects/3639/devlogs/49204">Wiring in 3D is HARD</a></strong><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49204">Aug 28, 2026 · 4.0h logged</a></sub></td><td width="50%" align="center" valign="top"><a href="https://cdn.hackclub.com/01a04eb9-d913-7d8c-8c8c-70eaa3a78f3e/Screenshot%202026-08-29%20220016.png"><img src="https://cdn.hackclub.com/01a04eb9-d913-7d8c-8c8c-70eaa3a78f3e/Screenshot%202026-08-29%20220016.png" alt="Development image: Wiring Hell" width="420"></a><br><strong><a href="https://forge.hackclub.com/projects/3639/devlogs/49205">Wiring Hell</a></strong><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49205">Aug 29, 2026 · 6.0h logged</a></sub></td></tr>
+<tr><td width="50%" align="center" valign="top"><a href="https://cdn.hackclub.com/01a053d2-6e83-7ba8-8806-402ecac67ca9/CNC%20Pen%20Ploter%20assembly%20instructions%20%287%29-29.png"><img src="https://cdn.hackclub.com/01a053d2-6e83-7ba8-8806-402ecac67ca9/CNC%20Pen%20Ploter%20assembly%20instructions%20%287%29-29.png" alt="Development image: I am DEAD INSIDE" width="420"></a><br><strong><a href="https://forge.hackclub.com/projects/3639/devlogs/49206">I am DEAD INSIDE</a></strong><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49206">Aug 30, 2026 · 6.5h logged</a></sub></td><td width="50%" align="center" valign="top"><a href="https://cdn.hackclub.com/01a05913-f9f7-7447-9a77-aa3c050e1488/Drawing%203%20%283%29-3.png"><img src="https://cdn.hackclub.com/01a05913-f9f7-7447-9a77-aa3c050e1488/Drawing%203%20%283%29-3.png" alt="Development image: BOM and workaround" width="420"></a><br><strong><a href="https://forge.hackclub.com/projects/3639/devlogs/49207">BOM and workaround</a></strong><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49207">Aug 31, 2026 · 4.0h logged</a></sub></td></tr>
+<tr><td width="50%" align="center" valign="top"><a href="https://cdn.hackclub.com/01a05a66-2330-7cbf-9c0d-2de874605394/Screenshot%202026-09-01%20015927.png"><img src="https://cdn.hackclub.com/01a05a66-2330-7cbf-9c0d-2de874605394/Screenshot%202026-09-01%20015927.png" alt="Development image: NO SLEEPING" width="420"></a><br><strong><a href="https://forge.hackclub.com/projects/3639/devlogs/49208">NO SLEEPING</a></strong><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49208">Aug 31, 2026 · 4.0h logged</a></sub></td><td width="50%" align="center" valign="top"><a href="https://cdn.hackclub.com/01a053d2-a1cf-794b-9da4-7410fc05d1e5/CNC%20Pen%20Ploter%20assembly%20instructions%20%287%29-30.png"><img src="https://cdn.hackclub.com/01a053d2-a1cf-794b-9da4-7410fc05d1e5/CNC%20Pen%20Ploter%20assembly%20instructions%20%287%29-30.png" alt="Development image: I am DEAD INSIDE" width="420"></a><br><strong><a href="https://forge.hackclub.com/projects/3639/devlogs/49206">I am DEAD INSIDE</a></strong><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49206">Additional view from this journal</a></sub><br><sub><a href="https://forge.hackclub.com/projects/3639/devlogs/49206">Aug 30, 2026 · 6.5h logged</a></sub></td></tr>
+</tbody>
+</table>
+
+## Where I have reached
+
+I have taken the project from an early handwriting-robot idea to a detailed CAD assembly, a researched BOM, STEP exports, and an illustrated assembly and wiring guide. I learned Onshape while making the machine, redesigned the frame when the first version did not work, worked through the pen-lift mechanism, tried to make a proper animation, and eventually modelled the wiring as well. Along the way, I also learned the hard way that a workaround can solve one problem and create another: duplicating an exploded view for every single guide step gave me the sequence I wanted, but helped make the Onshape document painfully slow.
+
+I have **not built the physical machine yet**. The next milestone is to assemble the frame and motion system, wire the electronics, complete and verify the FluidNC configuration, and test movement, homing, pen lift, and actual drawing. I will only call those things complete after I have tested them on the real machine.
 
 ---
 
-# Research & Planning
-
-*May 1–2, 2026*
-
-The project began with researching CNC plotters, handwriting robots, motion systems, controllers, and mechanical design approaches. The goal was to understand the hardware requirements before starting CAD.
-
-|                                           |                                           |                                           |                                           |
-| ----------------------------------------- | ----------------------------------------- | ----------------------------------------- | ----------------------------------------- |
-| ![](./Development/Screenshot%202026-05-01%20142500.png) | ![](./Development/Screenshot%202026-05-01%20142522.png) | ![](./Development/Screenshot%202026-05-01%20142550.png) | ![](./Development/Screenshot%202026-05-02%20211251.png) |
-
----
-
-# First CAD Frame
-
-*May 8, 2026*
-
-The first CAD model was created around an A3 sheet size. V-slot extrusions were added and the overall machine dimensions were established.
-
-|                                           |                                           |                                           |                                           |
-| ----------------------------------------- | ----------------------------------------- | ----------------------------------------- | ----------------------------------------- |
-| ![](./Development/Screenshot%202026-05-08%20194039.png) | ![](./Development/Screenshot%202026-05-08%20210725.png) | ![](./Development/Screenshot%202026-05-08%20210839.png) | ![](./Development/Screenshot%202026-05-08%20225255.png) |
-
----
-
-# Learning Hardware & V-Slot Components
-
-*May 9, 2026*
-
-A large amount of time was spent learning how V-slot hardware, corner brackets, wheels, spacers, screws, and T-nuts fit together.
-
-|                                           |                                           |                                           |                                           |
-| ----------------------------------------- | ----------------------------------------- | ----------------------------------------- | ----------------------------------------- |
-| ![](./Development/Screenshot%202026-05-09%20160639.png) | ![](./Development/Screenshot%202026-05-09%20162013.png) | ![](./Development/Screenshot%202026-05-09%20163708.png) | ![](./Development/Screenshot%202026-05-09%20194741.png) |
-
----
-
-# Major Frame Redesign
-
-*May 10, 2026*
-
-After discovering limitations in the original frame layout, the machine was redesigned around a larger and more practical structure using 2040 V-slot extrusions.
-
-|                                           |                                           |                                           |                                           |
-| ----------------------------------------- | ----------------------------------------- | ----------------------------------------- | ----------------------------------------- |
-| ![](./Development/Screenshot%202026-05-10%20173016.png) | ![](./Development/Screenshot%202026-05-10%20173034.png) | ![](./Development/Screenshot%202026-05-10%20232331.png) | ![](./Development/Screenshot%202026-05-10%20232352.png) |
-| ![](./Development/Screenshot%202026-05-10%20232403.png) | ![](./Development/Screenshot%202026-05-10%20232701.png) |                                           |                                           |
-
----
-
-# Hardware Integration
-
-*May 16, 2026*
-
-The CAD model matured significantly as motion hardware, wheel assemblies, spacers, and structural components were integrated into the design.
-
-|                                           |                                           |                                           |                                           |
-| ----------------------------------------- | ----------------------------------------- | ----------------------------------------- | ----------------------------------------- |
-| ![](./Development/Screenshot%202026-05-16%20133308.png) | ![](./Development/Screenshot%202026-05-16%20145145.png) | ![](./Development/Screenshot%202026-05-16%20145712.png) | ![](./Development/Screenshot%202026-05-16%20154206.png) |
-| ![](./Development/Screenshot%202026-05-16%20173733.png) | ![](./Development/Screenshot%202026-05-16%20174343.png) |                                           |                                           |
-
----
-
-# BOM & Manufacturing Research
-
-*May 27–30, 2026*
-
-Attention shifted toward sourcing components, generating a bill of materials, locating suppliers, and preparing the project for physical construction.
-
-|                                           |                                           |                                           |                                           |
-| ----------------------------------------- | ----------------------------------------- | ----------------------------------------- | ----------------------------------------- |
-| ![](./Development/Screenshot%202026-05-27%20233517.png) | ![](./Development/Screenshot%202026-05-29%20212844.png) | ![](./Development/Screenshot%202026-05-30%20223051.png) | ![](./Development/Screenshot%202026-05-30%20223129.png) |
-
----
-
-# Pen Lift Development
-
-*May 31, 2026*
-
-Development focused on the servo-driven pen-lift mechanism and integration into the main assembly.
-
-|                                           |                                           |                                           |                                           |
-| ----------------------------------------- | ----------------------------------------- | ----------------------------------------- | ----------------------------------------- |
-| ![](./Development/Screenshot%202026-05-31%20000455.png) | ![](./Development/Screenshot%202026-05-31%20003721.png) | ![](./Development/Screenshot%202026-05-31%20004723.png) | ![](./Development/Screenshot%202026-05-31%20010136.png) |
-| ![](./Development/Screenshot%202026-05-31%20011636.png) | ![](./Development/onshape-at%20-2%20am.png)             |                                           |                                           |
-
----
-
-# Final CAD Assembly
-
-*June 7, 2026*
-
-The CAD assembly was completed, including the frame, motion system, pen lift, electronics placement, wiring provisions, and structural validation.
-
-|                                           |                                           |
-| ----------------------------------------- | ----------------------------------------- |
-| ![](./Development/Screenshot%202026-06-07%20222151.png) | ![](./Development/Screenshot%202026-06-07%20222203.png) |
-| ![](./Development/Screenshot%202026-06-07%20222212.png) | ![](./Development/Screenshot%202026-06-07%20222221.png) |
-| ![](./Development/Screenshot%202026-06-07%20222251.png) | ![](./Development/Screenshot%202026-06-07%20222258.png) |
-| ![](./Development/Screenshot%202026-06-07%20222307.png) | ![](./Development/Screenshot%202026-06-07%20222320.png) |
-
----
-
-# Project Complete (Design Phase)
-
-By June 2026:
-
-* CAD Design Complete
-* Electronics Selected
-* BOM Complete
-* Parts Sourced
-* Ready for Physical Build
-
-**Final estimated build cost:** ₹21,765.83 (~$220.67 USD)
+_I compiled this timeline from my 62 Forge devlogs for [project](https://forge.hackclub.com/projects/3639). I selected representative images for this page; the original logs contain the full chronology and more context on the decisions, mistakes, and rabbit holes: [CNC Pen Plotter on Forge](https://forge.hackclub.com/projects/3639)._

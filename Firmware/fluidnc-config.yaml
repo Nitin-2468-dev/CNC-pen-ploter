@@ -1,2 +1,137 @@
-# TODO
-# Final configuration will be added after machine assembly and testing.
+# CNC Pen Plotter - FluidNC configuration draft
+# Hardware assumption for this draft:
+#   - MKS DLC32 V2.1 with DRV8825/stepstick drivers in the X, Y, and Z sockets
+#   - X motor uses the X driver output
+#   - Left Y motor uses the Y driver output
+#   - Right Y motor uses the Z driver output, assigned as y.motor1 in FluidNC
+#   - SG90 servo signal is connected to GPIO22 (the board's servo/PWM signal)
+#   - X and Y normally-open endstops switch their signal to GND when pressed
+#
+# IMPORTANT: This file is NOT machine-tested. Confirm your exact board/driver
+# wiring, microstep jumper settings, limit-switch locations/directions, travel,
+# and servo endpoints before running motion commands.
+
+board: MKS-DLC32 V2.1
+name: CNC Pen Plotter
+meta: Draft - verify wiring and calibrate before motion
+
+kinematics:
+  Cartesian:
+
+stepping:
+  engine: I2S_STATIC
+  # 255 means the stepper drivers are never automatically disabled.
+  # Monitor driver/motor temperature during commissioning and tune if needed.
+  idle_ms: 255
+  pulse_us: 4
+  dir_delay_us: 1
+  disable_delay_us: 0
+
+axes:
+  shared_stepper_disable_pin: I2SO.0
+
+  x:
+    # Assumes 1.8-degree motors, GT2 2 mm pitch, 20-tooth pulley, and 1/16 microstepping.
+    # Formula: (200 full steps/rev * 16 microsteps) / (20 teeth * 2 mm) = 80 steps/mm.
+    steps_per_mm: 80.0
+    max_rate_mm_per_min: 1000.0
+    acceleration_mm_per_sec2: 50.0
+    # Temporary value only. Measure usable travel after assembly.
+    max_travel_mm: 300.0
+    # Keep disabled until travel and homing have been checked on the real machine.
+    soft_limits: false
+    homing:
+      cycle: 1
+      # Assumes the X switch is at the negative end of travel.
+      positive_direction: false
+      mpos_mm: 0.0
+      seek_mm_per_min: 200.0
+      feed_mm_per_min: 50.0
+      settle_ms: 500
+      seek_scaler: 1.1
+      feed_scaler: 1.1
+    motor0:
+      # Assumes X endstop NO is wired to signal and COM to GND.
+      limit_neg_pin: gpio.36:low:pu
+      hard_limits: false
+      pulloff_mm: 2.0
+      stepstick:
+        step_pin: I2SO.1
+        direction_pin: I2SO.2
+
+  y:
+    # Same motion assumptions as X. Calibrate before enabling soft limits.
+    steps_per_mm: 80.0
+    max_rate_mm_per_min: 1000.0
+    acceleration_mm_per_sec2: 50.0
+    # Temporary value only. Measure usable travel after assembly.
+    max_travel_mm: 200.0
+    soft_limits: false
+    homing:
+      cycle: 1
+      # Assumes the Y switch is at the negative end of travel.
+      positive_direction: false
+      mpos_mm: 0.0
+      seek_mm_per_min: 200.0
+      feed_mm_per_min: 50.0
+      settle_ms: 500
+      seek_scaler: 1.1
+      feed_scaler: 1.1
+    motor0:
+      # Left Y motor on the controller's Y driver output.
+      limit_neg_pin: gpio.35:low:pu
+      hard_limits: false
+      pulloff_mm: 2.0
+      stepstick:
+        step_pin: I2SO.5
+        direction_pin: I2SO.6
+    motor1:
+      # Right Y motor uses the controller's Z driver output as the second Y motor.
+      # Direction is inverted because the two gantry motors are commonly mirrored.
+      # If a low-speed jog test shows this motor fighting the other, stop and review this.
+      stepstick:
+        step_pin: I2SO.3
+        direction_pin: I2SO.4:low
+
+  z:
+    # Z is a virtual axis for the SG90 pen-lift servo; there is no Z stepper.
+    # The servo's mechanical travel is estimated at about 5 mm from the CAD design.
+    steps_per_mm: 100.0
+    max_rate_mm_per_min: 100.0
+    acceleration_mm_per_sec2: 25.0
+    max_travel_mm: 5.0
+    soft_limits: true
+    homing:
+      # Assign Z0 without physically moving/searching for a Z endstop.
+      cycle: -1
+      mpos_mm: 0.0
+    motor0:
+      rc_servo:
+        pwm_hz: 50
+        output_pin: gpio.22
+        # Conservative starting range; tune carefully for the real pen-lift linkage.
+        # Z0 maps to 1200 us and Z5 maps to 1800 us in this draft.
+        min_pulse_us: 1200
+        max_pulse_us: 1800
+
+# I2S output-shift register pins for the MKS DLC32 V2.1 stepper outputs.
+i2so:
+  bck_pin: gpio.16
+  data_pin: gpio.21
+  ws_pin: gpio.17
+
+# SD card interface from the standard MKS DLC32 V2.1 FluidNC example.
+spi:
+  miso_pin: gpio.12
+  mosi_pin: gpio.13
+  sck_pin: gpio.14
+
+sdcard:
+  cs_pin: gpio.15
+  card_detect_pin: NO_PIN
+
+# No probe is configured because GPIO22 is used for the SG90 servo signal.
+# The switches are currently configured for homing only, not hard-limit stops.
+
+start:
+  must_home: false
