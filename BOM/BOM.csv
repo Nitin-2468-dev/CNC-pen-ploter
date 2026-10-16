@@ -1,68 +1,68 @@
 Category,Part,Specification,Min Qty,Qty,Unit Cost (INR),Total Cost (INR),Est. Cost (USD),Link,,
-Motion,NEMA 17 Stepper Motor,42 x 42 mm,,3,?450.00,"?1,350.00",$14.22,https://rees52.com/products/17hs4401s-nema-17-stepper-motor-for-3d-printer?_pos=4&_sid=48153941e&_ss=r,"?4,328.00",$45.60
-,Delrin Solid V-Wheel,.,,12,?199.00,"?2,388.00",$25.16,https://www.3dprintronics.com/products/?productId=65234093,,
-,GT2 Timing Pulley,"20T, M5",,3,?140.00,?420.00,$4.43,https://www.3dprintronics.com/products/gt-2-pulley-20t-5mm-bore,,
-,GT2 Timing Belt,2m,,2,?85.00,?170.00,$1.79,https://makerbazar.in/products/1m-gt2-width-6mm-black-open-timing-belt-for-3d-printer,,
-Aluminium Frame,V-Slot Extrusion 2040,444 mm,500 mm,1,?731.60,?731.60,$7.71,https://www.3dprintronics.com/extrusions?productId=721461094,"?4,162.40",$43.86
-,V-Slot Extrusion 2040,610 mm,500 mm,2,"?2,053.20","?2,053.20",$21.63,https://www.3dprintronics.com/extrusions?productId=721461094,,
-,V-Slot Extrusion 2020,444 mm,500 mm,2,?849.60,?849.60,$8.95,https://www.3dprintronics.com/extrusions?productId=720294005,,
-,Corner Bracket 20,20 Series,,8,?66.00,?528.00,$5.56,https://www.3dprintronics.com/brackets,,
-M5 Hardware,Ultra Low Profile Screw,M5x 50mm,10,1,?24.00,?240.00,$2.53,https://www.3dprintronics.com/fasteners,"?3,271.20",$34.47
-,Ultra Low Profile Screw,M5 x40mm,10,3,?24.00,?240.00,$2.53,https://www.3dprintronics.com/fasteners,,
-,Ultra Low Profile Screw,M5x 30mm,10,8,?20.00,?200.00,$2.11,https://www.3dprintronics.com/fasteners,,
-,Ultra Low Profile Screw,M5 × 25 mm,10,12,?21.60,?259.20,$2.73,https://www.3dprintronics.com/fasteners,,
-,Ultra Low Profile Screw,M5 x 15 mm,10,6,?27.50,?275.00,$2.90,https://www.3dprintronics.com/fasteners,,
-,Ultra Low Profile Screw,M5 × 10 mm,10,3,?27.50,?275.00,$2.90,https://www.3dprintronics.com/fasteners,,
-,Ultra Low Profile Screw,M5 × 8 mm,10,30,?25.00,?750.00,$7.90,https://www.3dprintronics.com/fasteners,,
-,Nylon Lock Nut,M5,10,16,?3.50,?56.00,$0.59,https://www.3dprintronics.com/fasteners,,
-,Washer / Shim,M5,10,28,?13.00,?364.00,$3.84,https://www.3dprintronics.com/fasteners,,
-,Drop-In T-Nut,M5,10,34,?18.00,?612.00,$6.45,https://www.3dprintronics.com/tnuts,,
-M3 Hardware,Screw,M3 × 16 mm,10,2,?14.00,?140.00,$1.46,https://www.3dprintronics.com/fasteners,?607.00,$6.38
-,Screw,M3 x 10 mm,10,12,?12.00,?144.00,$1.52,https://www.3dprintronics.com/fasteners,,
-,PCB Stand-Off,M3,,1,?143.00,?143.00,$1.51,https://rees52.com/products/m3x10mm-nylon-hex-spacers-10mm-female-female-nylon-hex-spacers-versatile-m3-nylon-hex-spacers-for-electronics-projects-pack-of-10-rs4028?_pos=4&_sid=70c24bf3d&_ss=r,,
-,Drop-In T-Nut,M3,10,2,?18.00,?180.00,$1.90,https://www.3dprintronics.com/tnuts,,
-M2.5 Hardware,Screw,M2.5 × 4 mm,10,2,?11.00,?110.00,$1.15,https://www.3dprintronics.com/fasteners,?110.00,$1.15
-M2 Hardware,Screw,M2 x 8 mm,10,6,?11.00,?110.00,$1.16,https://www.3dprintronics.com/fasteners,$110.00,$1.16
-Spacers,Aluminium Spacer,5.1 mm ID × 6 mm,10,16,?15.00,?240.00,$2.53,https://www.3dprintronics.com/fasteners,?240.00,$2.53
-Printed Parts,Clip Fixture,36g (5.96 g each ),,6,?0.00,?0.00,$0.00,https://github.com/Nitin-2468-dev/CNC-pen-ploter/blob/4257d85dff9801f25d6eed69f16ddeeee0ea9228/CAD/3D%20print/Final%20Build%20-%20Clip%20fixture.stl,?0.00,$0.00
-,Limit Switch Mount,2.5g (1.13 g each),,2,?0.00,?0.00,$0.00,https://github.com/Nitin-2468-dev/CNC-pen-ploter/blob/4257d85dff9801f25d6eed69f16ddeeee0ea9228/CAD/3D%20print/Final%20Build%20-%20Limit_Switch%20mount.stl,,
-,Pen Carriage Moving,12.58g,,1,?0.00,?0.00,$0.00,https://github.com/Nitin-2468-dev/CNC-pen-ploter/blob/1301df8278865117f46e9abd898126a73db8b00f/CAD/3D%20print/Final%20Build%20-%20pen%20carriage%20M.stl,,
-,Pen Carriage Monunt,16.52g,,1,?0.00,?0.00,$0.00,https://github.com/Nitin-2468-dev/CNC-pen-ploter/blob/4257d85dff9801f25d6eed69f16ddeeee0ea9228/CAD/3D%20print/Final%20Build%20-%20pen%20carriage%20S.stl,,
-,Buck convertor Mount,2.91 g,,1,?0.00,?0.00,$0.00,https://github.com/Nitin-2468-dev/CNC-pen-ploter/blob/1301df8278865117f46e9abd898126a73db8b00f/CAD/3D%20print/Part%20Studio%201%20-%20Buck-Convertor%20mount.stl,,
-Laser cut,ACRO Plate Set,,,1,"?1,480.00","?1,480.00",$15.59,https://www.3dprintronics.com/products/acro-acrylic-plate-set,"?1,480.00",$15.59
-Pen Lift,Concrete Nail,70 mm,,2,?19.00,?38.00,$0.40,https://makerbazar.in/products/concrete-iron-nails?variant=44871802716400,?153.00,$1.61
-,Pen Spring,7.5mm,,2,?0.00,?0.00,$0.00,,,
-,Screw Knob,M5 x 15 mm,,1,?115.00,?115.00,$1.21,https://www.3dprintronics.com/fasteners,,
-Electronics,MKS DLC32,,,1,"?1,900.00","?1,900.00",$20.02,https://rees52.com/products/makerbase-mks-dlc32-v2-1-offline-controller-board-for-standalone-3d-printer-cnc-board?selling_plan=2556362919&variant=47709331161255,"?4,138.00",$43.60
-,DRV8825 Motor Driver,,,3,?99.00,?297.00,$3.13,https://makerbazar.in/products/drv8825-stepper-motor-driver-with-aluminum-heat-sink?variant=45989819384048,,
-,Meanwell Power Supply,,,1,"?1,749.00","?1,749.00",$18.43,https://www.3dprintronics.com/products/original-meanwell-psu-lrs-150-24,,
-,DC-DC Converter,,,1,?65.00,?65.00,$0.68,https://makerbazar.in/products/xl6009-dc-dc-adjustable-boost-buck-step-up-step-down-converter-module?variant=49621760803056,,
-,Servo Motor ,,,1,?99.00,?99.00,$1.04,https://makerbazar.in/products/small-servo-plastic-gear-svg90s?variant=45449411395824,,
-,Limit Switch,,,2,?14.00,?28.00,$0.30,https://makerbazar.in/products/automation-direct-limit-switch?variant=46931163742448,,
-Connectors,JST-XH Connector Kit,"2.54 mm, 230 pcs",,1,?229.00,229,$2.41,https://makerbazar.in/products/230pcs-jst-xh-2-54mm-terminal-connectors-kit?variant=44076187353328,"?1,608.00",$16.94
-,Wire Stripper / Crimper,27 in 1,,1,?229.00,229,$2.41,https://makerbazar.in/products/multifunctional-wire-stripper-tool?variant=48854082224368,,
-,22 AWG wire.,RED,,5m,"?1,150.00",1150,$12.12,https://rees52.com/products/22-awg-hookup-wire-kit-600v-pre-tinned-solid-core-copper-wire-6-assorted-colors-10-meters-each-for-electronics-and-diy-projects-solid-rs3858?variant=45173813280935&country=IN&currency=INR,,
-,22 AWG wire.,BLACK,,3m,?0.00,0,$0.00,https://rees52.com/products/22-awg-hookup-wire-kit-600v-pre-tinned-solid-core-copper-wire-6-assorted-colors-10-meters-each-for-electronics-and-diy-projects-solid-rs3858?variant=45173813280935&country=IN&currency=INR,,
-,22 AWG wire.,BLUE,,3m,?0.00,0,$0.00,https://rees52.com/products/22-awg-hookup-wire-kit-600v-pre-tinned-solid-core-copper-wire-6-assorted-colors-10-meters-each-for-electronics-and-diy-projects-solid-rs3858?variant=45173813280935&country=IN&currency=INR,,
-,22 AWG wire.,YELLOW,,1m,?0.00,0,$0.00,https://rees52.com/products/22-awg-hookup-wire-kit-600v-pre-tinned-solid-core-copper-wire-6-assorted-colors-10-meters-each-for-electronics-and-diy-projects-solid-rs3858?variant=45173813280935&country=IN&currency=INR,,
-,22 AWG wire.,GREEN,,3m,?0.00,0,$0.00,https://rees52.com/products/22-awg-hookup-wire-kit-600v-pre-tinned-solid-core-copper-wire-6-assorted-colors-10-meters-each-for-electronics-and-diy-projects-solid-rs3858?variant=45173813280935&country=IN&currency=INR,,
-other,20mm Conduit,,,1,?499.00,?499.00,$5.26,https://makerbazar.in/products/gi-flexible-electrical-conduit-pipe?variant=49720866930928,,
+Motion,NEMA 17 Stepper Motor,42 x 42 mm,,3, ? 450.00 ," ? 1,350.00 ", $14.22 ,https://rees52.com/products/17hs4401s-nema-17-stepper-motor-for-3d-printer?_pos=4&_sid=48153941e&_ss=r,"?4,328.00",$45.60
+,Delrin Solid V-Wheel,.,,12, ? 199.00 ," ? 2,388.00 ", $25.16 ,https://www.3dprintronics.com/products/?productId=65234093,,
+,GT2 Timing Pulley,"20T, M5",,3, ? 140.00 , ? 420.00 , $4.43 ,https://www.3dprintronics.com/products/gt-2-pulley-20t-5mm-bore,,
+,GT2 Timing Belt,2m,,2, ? 85.00 , ? 170.00 , $1.79 ,https://makerbazar.in/products/1m-gt2-width-6mm-black-open-timing-belt-for-3d-printer,,
+Aluminium Frame,V-Slot Extrusion 2040,444 mm,500 mm,1, ? 731.60 , ? 731.60 , $7.71 ,https://www.3dprintronics.com/extrusions?productId=721461094,"?4,162.40",$43.86
+,V-Slot Extrusion 2040,610 mm,500 mm,2," ? 2,053.20 "," ? 2,053.20 ", $21.63 ,https://www.3dprintronics.com/extrusions?productId=721461094,,
+,V-Slot Extrusion 2020,444 mm,500 mm,2, ? 849.60 , ? 849.60 , $8.95 ,https://www.3dprintronics.com/extrusions?productId=720294005,,
+,Corner Bracket 20,20 Series,,8, ? 66.00 , ? 528.00 , $5.56 ,https://www.3dprintronics.com/brackets,,
+M5 Hardware,Ultra Low Profile Screw,M5x 50mm,10,1, ? 24.00 , ? 240.00 , $2.53 ,https://www.3dprintronics.com/fasteners,"?3,271.20",$34.47
+,Ultra Low Profile Screw,M5 x40mm,10,3, ? 24.00 , ? 240.00 , $2.53 ,https://www.3dprintronics.com/fasteners,,
+,Ultra Low Profile Screw,M5x 30mm,10,8, ? 20.00 , ? 200.00 , $2.11 ,https://www.3dprintronics.com/fasteners,,
+,Ultra Low Profile Screw,M5 × 25 mm,10,12, ? 21.60 , ? 259.20 , $2.73 ,https://www.3dprintronics.com/fasteners,,
+,Ultra Low Profile Screw,M5 x 15 mm,10,6, ? 27.50 , ? 275.00 , $2.90 ,https://www.3dprintronics.com/fasteners,,
+,Ultra Low Profile Screw,M5 × 10 mm,10,3, ? 27.50 , ? 275.00 , $2.90 ,https://www.3dprintronics.com/fasteners,,
+,Ultra Low Profile Screw,M5 × 8 mm,10,30, ? 25.00 , ? 750.00 , $7.90 ,https://www.3dprintronics.com/fasteners,,
+,Nylon Lock Nut,M5,10,16, ? 3.50 , ? 56.00 , $0.59 ,https://www.3dprintronics.com/fasteners,,
+,Washer / Shim,M5,10,28, ? 13.00 , ? 364.00 , $3.84 ,https://www.3dprintronics.com/fasteners,,
+,Drop-In T-Nut,M5,10,34, ? 18.00 , ? 612.00 , $6.45 ,https://www.3dprintronics.com/tnuts,,
+M3 Hardware,Screw,M3 × 16 mm,10,2, ? 14.00 , ? 140.00 , $1.46 ,https://www.3dprintronics.com/fasteners,?607.00,$6.38
+,Screw,M3 x 10 mm,10,12, ? 12.00 , ? 144.00 , $1.52 ,https://www.3dprintronics.com/fasteners,,
+,PCB Stand-Off,M3,,1, ? 143.00 , ? 143.00 , $1.51 ,https://rees52.com/products/m3x10mm-nylon-hex-spacers-10mm-female-female-nylon-hex-spacers-versatile-m3-nylon-hex-spacers-for-electronics-projects-pack-of-10-rs4028?_pos=4&_sid=70c24bf3d&_ss=r,,
+,Drop-In T-Nut,M3,10,2, ? 18.00 , ? 180.00 , $1.90 ,https://www.3dprintronics.com/tnuts,,
+M2.5 Hardware,Screw,M2.5 × 4 mm,10,2, ? 11.00 , ? 110.00 , $1.15 ,https://www.3dprintronics.com/fasteners,?110.00,$1.15
+M2 Hardware,Screw,M2 x 8 mm,10,6, ? 11.00 , ? 110.00 , $1.16 ,https://www.3dprintronics.com/fasteners,$110.00,$1.16
+Spacers,Aluminium Spacer,5.1 mm ID × 6 mm,10,16, ? 15.00 , ? 240.00 , $2.53 ,https://www.3dprintronics.com/fasteners,?240.00,$2.53
+Printed Parts,Clip Fixture,36g (5.96 g each ),,6, ? -   , ? -   , $0.00 ,https://github.com/Nitin-2468-dev/CNC-pen-ploter/blob/4257d85dff9801f25d6eed69f16ddeeee0ea9228/CAD/3D%20print/Final%20Build%20-%20Clip%20fixture.stl,?0.00,$0.00
+,Limit Switch Mount,2.5g (1.13 g each),,2, ? -   , ? -   , $0.00 ,https://github.com/Nitin-2468-dev/CNC-pen-ploter/blob/4257d85dff9801f25d6eed69f16ddeeee0ea9228/CAD/3D%20print/Final%20Build%20-%20Limit_Switch%20mount.stl,,
+,Pen Carriage Moving,12.58g,,1, ? -   , ? -   , $0.00 ,https://github.com/Nitin-2468-dev/CNC-pen-ploter/blob/1301df8278865117f46e9abd898126a73db8b00f/CAD/3D%20print/Final%20Build%20-%20pen%20carriage%20M.stl,,
+,Pen Carriage Monunt,16.52g,,1, ? -   , ? -   , $0.00 ,https://github.com/Nitin-2468-dev/CNC-pen-ploter/blob/4257d85dff9801f25d6eed69f16ddeeee0ea9228/CAD/3D%20print/Final%20Build%20-%20pen%20carriage%20S.stl,,
+,Buck convertor Mount,2.91 g,,1, ? -   , ? -   , $0.00 ,https://github.com/Nitin-2468-dev/CNC-pen-ploter/blob/1301df8278865117f46e9abd898126a73db8b00f/CAD/3D%20print/Part%20Studio%201%20-%20Buck-Convertor%20mount.stl,,
+Laser cut,ACRO Plate Set,,,1," ? 1,480.00 "," ? 1,480.00 ", $15.59 ,https://www.3dprintronics.com/products/acro-acrylic-plate-set,"?1,480.00",$15.59
+Pen Lift,Concrete Nail,70 mm,,2, ? 19.00 , ? 38.00 , $0.40 ,https://makerbazar.in/products/concrete-iron-nails?variant=44871802716400,?153.00,$1.61
+,Pen Spring,7.5mm,,2, ? -   , ? -   , $0.00 ,,,
+,Screw Knob,M5 x 15 mm,,1, ? 115.00 , ? 115.00 , $1.21 ,https://www.3dprintronics.com/fasteners,,
+Electronics,MKS DLC32,,,1," ? 1,900.00 "," ? 1,900.00 ", $20.02 ,https://rees52.com/products/makerbase-mks-dlc32-v2-1-offline-controller-board-for-standalone-3d-printer-cnc-board?selling_plan=2556362919&variant=47709331161255,"?4,138.00",$43.60
+,DRV8825 Motor Driver,,,3, ? 99.00 , ? 297.00 , $3.13 ,https://makerbazar.in/products/drv8825-stepper-motor-driver-with-aluminum-heat-sink?variant=45989819384048,,
+,Meanwell Power Supply,,,1," ? 1,749.00 "," ? 1,749.00 ", $18.43 ,https://www.3dprintronics.com/products/original-meanwell-psu-lrs-150-24,,
+,DC-DC Converter,,,1, ? 65.00 , ? 65.00 , $0.68 ,https://makerbazar.in/products/xl6009-dc-dc-adjustable-boost-buck-step-up-step-down-converter-module?variant=49621760803056,,
+,Servo Motor ,,,1, ? 99.00 , ? 99.00 , $1.04 ,https://makerbazar.in/products/small-servo-plastic-gear-svg90s?variant=45449411395824,,
+,Limit Switch,,,2, ? 14.00 , ? 28.00 , $0.30 ,https://makerbazar.in/products/automation-direct-limit-switch?variant=46931163742448,,
+Connectors,JST-XH Connector Kit,"2.54 mm, 230 pcs",,1, ? 229.00 , ? 229.00 , $2.41 ,https://makerbazar.in/products/230pcs-jst-xh-2-54mm-terminal-connectors-kit?variant=44076187353328,"?1,608.00",$16.94
+,Wire Stripper / Crimper,27 in 1,,1, ? 229.00 , ? 229.00 , $2.41 ,https://makerbazar.in/products/multifunctional-wire-stripper-tool?variant=48854082224368,,
+,22 AWG wire.,RED,,5m," ? 1,150.00 "," ? 1,150.00 ", $12.12 ,https://rees52.com/products/22-awg-hookup-wire-kit-600v-pre-tinned-solid-core-copper-wire-6-assorted-colors-10-meters-each-for-electronics-and-diy-projects-solid-rs3858?variant=45173813280935&country=IN&currency=INR,,
+,22 AWG wire.,BLACK,,3m, ? -   , ? -   , $0.00 ,https://rees52.com/products/22-awg-hookup-wire-kit-600v-pre-tinned-solid-core-copper-wire-6-assorted-colors-10-meters-each-for-electronics-and-diy-projects-solid-rs3858?variant=45173813280935&country=IN&currency=INR,,
+,22 AWG wire.,BLUE,,3m, ? -   , ? -   , $0.00 ,https://rees52.com/products/22-awg-hookup-wire-kit-600v-pre-tinned-solid-core-copper-wire-6-assorted-colors-10-meters-each-for-electronics-and-diy-projects-solid-rs3858?variant=45173813280935&country=IN&currency=INR,,
+,22 AWG wire.,YELLOW,,1m, ? -   , ? -   , $0.00 ,https://rees52.com/products/22-awg-hookup-wire-kit-600v-pre-tinned-solid-core-copper-wire-6-assorted-colors-10-meters-each-for-electronics-and-diy-projects-solid-rs3858?variant=45173813280935&country=IN&currency=INR,,
+,22 AWG wire.,GREEN,,3m, ? -   , ? -   , $0.00 ,https://rees52.com/products/22-awg-hookup-wire-kit-600v-pre-tinned-solid-core-copper-wire-6-assorted-colors-10-meters-each-for-electronics-and-diy-projects-solid-rs3858?variant=45173813280935&country=IN&currency=INR,,
+other,20mm Conduit,,,1, ? 499.00 , ? 499.00 , $5.26 ,https://makerbazar.in/products/gi-flexible-electrical-conduit-pipe?variant=49720866930928,,
 ,,,,,,,,,"?20,207.60",$212.89
 Category Totals,,,,,,,,,,
-Motion,,,,,," ? 4,328.00 ", $45.60 ,,,
-Aluminium Frame,,,,,," ? 4,162.40 ", $43.86 ,,,
-M5 Hardware,,,,,," ? 3,271.20 ", $34.47 ,,,
-M3 Hardware,,,,,, ? 607.00 , $6.40 ,,,
-M2.5 Hardware,,,,,, ? 110.00 , $1.16 ,,,
-M2 Hardware,,,,,, ? 110.00 , $1.16 ,,,
-Spacers,,,,,, ? 240.00 , $2.53 ,,,
-Printed Parts,,,,,, ? -   , $-   ,,,
-Laser cut,,,,,," ? 1,480.00 ", $15.59 ,,,
-Pen Lift,,,,,, ? 153.00 , $1.61 ,,,
-Electronics,,,,,," ? 4,138.00 ", $43.60 ,,,
-Connectors,,,,,," ? 1,150.00 ", $12.12 ,,,
-other,,,,,, ? 499.00 , $5.26 ,,,
-Shiping,,,,,, ? 500.00 , $5.27 ,,,
-Grand Total,,,,,," ? 20,748.60 ", $218.61 ,,,
+Motion,,,,,," ? 4,328.00 ",  $45.60  ,,,
+Aluminium Frame,,,,,," ? 4,162.40 ",  $43.86  ,,,
+M5 Hardware,,,,,," ? 3,271.20 ",  $34.47  ,,,
+M3 Hardware,,,,,, ? 607.00 ,  $6.40  ,,,
+M2.5 Hardware,,,,,, ? 110.00 ,  $1.16  ,,,
+M2 Hardware,,,,,, ? 110.00 ,  $1.16  ,,,
+Spacers,,,,,, ? 240.00 ,  $2.53  ,,,
+Printed Parts,,,,,, ? -   ,  $-    ,,,
+Laser cut,,,,,," ? 1,480.00 ",  $15.59  ,,,
+Pen Lift,,,,,, ? 153.00 ,  $1.61  ,,,
+Electronics,,,,,," ? 4,138.00 ",  $43.60  ,,,
+Connectors,,,,,," ? 1,150.00 ",  $12.12  ,,,
+other,,,,,, ? 499.00 ,  $5.26  ,,,
+Shiping,,,,,, ? 500.00 ,  $5.27  ,,,
+Grand Total,,,,,," ? 20,748.60 ",  $218.61  ,,,
 ,,,,,,,,,,
-Rate (USD to INR),94.91,,,,,,,,,
+Rate (USD to INR),? 94.91,,,,,,,,,
