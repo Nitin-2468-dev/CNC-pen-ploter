@@ -9,6 +9,7 @@ A custom A3-format CNC pen plotter designed in CAD and inspired by the [OpenBuil
 ## Quick links
 
 - [Project video/demo on YouTube](https://youtu.be/2c1DS8Nv8dU)
+- [Project Time-lapse on YouTube (uncut)](https://youtu.be/Af07R7YpBRI)
 - [Hack Club Forge project page](https://forge.hackclub.com/projects/3639)
 - [My story](./Images/README.md)
 - [Assembly guide PDF (download from the release)](https://github.com/Nitin-2468-dev/CNC-pen-ploter/releases/download/v1.0/GUIDE_updated.pdf)
@@ -60,7 +61,7 @@ The BOM lists mechanical hardware, extrusions, printed parts, electronics, wires
 
 ## Assembly guide
 
-[![GUIDE](./Docs/01.png)](./Docs/README.md)
+[![GUIDE](./Images/Guide-images/01.png)](./Docs/README.md)
 
 > Download the 41-page [CNC Pen Plotter Assembly & Wiring Guide (PDF)](https://github.com/Nitin-2468-dev/CNC-pen-ploter/releases/download/v1.0/GUIDE_updated.pdf) from the [v1.0 release](https://github.com/Nitin-2468-dev/CNC-pen-ploter/releases/tag/v1.0).
 
